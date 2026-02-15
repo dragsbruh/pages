@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+
+{% block content %}
+    {% if section %}
+        {% set page = section %}
+    {% endif %}
+
+    <h2>{{ page.title }}</h2>
+    
+    <article class="markdown">
+        <hr>
+
+        {{ page.content | safe }}
+    </article>
+{% endblock %}

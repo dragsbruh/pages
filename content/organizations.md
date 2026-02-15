@@ -1,5 +1,6 @@
 ---
 title: organizations
+description: some of the organizations that i support
 template: content.html
 ---
 

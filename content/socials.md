@@ -1,5 +1,6 @@
 ---
 title: socials
+description: you can contact me here
 template: content.html
 ---
 

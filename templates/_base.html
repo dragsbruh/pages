@@ -2,12 +2,51 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>ufufurina</title>
+  
+		<meta name="theme-color" content="#cba6f7">
 
 		{% block opengraph %}
-		{% endblock opengraph %}
+    		{% if section %}
+    		    {% set page = section %}
+    		{% endif %}
 
-		<link rel="stylesheet" href="/styles.css">
+    		<title>ufufurina - {{ page.title }}</title>
+    		<meta name="description" content="{{ page.description }}" />
+			<link rel="icon" href="/avatar.jpg">
+			
+    		<meta property="og:site_name" content="ufufurina">
+
+    		<meta property="og:title" content="{{ page.title }}">
+    		<meta property="og:description" content="{{ page.description }}">
+    		<meta property="og:url" content="{{ page.permalink }}">
+	
+			<meta name="twitter:title" content="{{ page.title }}">
+			<meta name="twitter:description" content="{{ page.description }}">
+
+			<meta name="twitter:creator" content="legendragswt">
+
+			{% set image = "/avatar.jpg" %}
+
+    		{% if page.extra.hero %}
+				<meta name="twitter:card" content="summary_large_image">
+				{% set image = page.extra.hero %}
+			{% else %}
+    		    <meta name="twitter:card" content="summary">
+
+				{% if page.extra.avatar %}
+					{% set image = page.extra.avatar %}
+				{% endif %}
+    		{% endif %}
+
+			{% if image is starting_with("/") %}
+				{% set image = config.base_url ~ image %}
+			{% endif %}
+
+			<meta name="twitter:image" content="{{ image }}">
+			<meta property="og:image" content="{{ image }}">
+		{% endblock %}
+
+		<link rel="stylesheet" href="/styles.css" />
 	</head>
 	
 	<body>
@@ -16,7 +55,7 @@
 		<div class="container">
 			<section class="content">
 				{% block content %}
-				{% endblock content %}
+				{% endblock %}
 
 
     			<a href="https://notbyai.fyi" class="plain notbyai" title="rest assured, what youre seeing is slop-free">
@@ -27,7 +66,7 @@
 
 		<footer>
 			<small>
-				<i>© 2026 dragsbruh. all content is licensed under CC-BY-4.0 unless mentioned otherwise.</i>
+				<i>© 2026 dragsbruh. all text content is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a> unless mentioned otherwise.</i>
 			</small>
 		</footer>
 	</body>

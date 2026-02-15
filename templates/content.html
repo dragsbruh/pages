@@ -1,17 +1,7 @@
-{% extends "_base.html" %}
+{% extends "_markdown.html" %}
 
-{% block content %}
-    {% if page %}
-        {% set item = page %}
-    {% else %}
-        {% set item = section %}
-    {% endif %}
-
-    <h2>{{ item.title }}</h2>
+{% block opengraph %}
+    {{ super() }}
     
-    <article class="markdown">
-        <hr>
-
-        {{ item.content | safe }}
-    </article>
+    <meta property="og:type" content="website">
 {% endblock %}

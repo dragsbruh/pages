@@ -1,9 +1,18 @@
-{% extends "_base.html" %}
+{% extends "_markdown.html" %}
+
+{% block opengraph %}
+    {{ super() }}
+
+    <meta property="og:type" content="website">
+{% endblock %}
 
 {% macro nested_section_pages(sec, emit=true) %}
     {% if emit %}
         <li class="section">
-            <h3>{{ sec.title }}</h3>
+            <div>
+                <h4>{{ sec.title }}</h4>
+                <p>{{ sec.description }}</p>
+            </div>
             <ul class="pages">
                 {% for page in sec.pages %}
                     <li>
@@ -21,13 +30,7 @@
 {% endmacro %}
 
 {% block content %}
-    <h2>{{ section.title }}</h2>
-
-    <article class="markdown">
-        <hr>
-
-        {{ section.content | safe }}
-    </article>
+    {{ super() }}
 
     <ul class="blog">
         {{ self::nested_section_pages(sec=section) }}

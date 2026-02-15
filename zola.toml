@@ -1,10 +1,12 @@
-base_url = "https://furina.is-a.dev/"
+base_url = "https://furina.is-a.dev"
 
 compile_sass = true
 build_search_index = false
 
 generate_sitemap = true
 generate_robots_txt = true
+
+minify_html = true
 
 [markdown]
 render_emoji = true

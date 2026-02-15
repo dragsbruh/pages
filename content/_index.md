@@ -1,5 +1,6 @@
 ---
 title: ufufurina
+description: hi there hello i code and stuff
 template: content.html
 extra:
   dropdown:
@@ -32,8 +33,8 @@ i dont really mind what pronouns you use tbh, just use whatever makes you feel g
 
 ## cool projects
 
-- [pebl](https://codeberg.org/dragsbruh/pebl): a tiny risc-v kernel
-- [arel](https://codeberg.org/dragsbruh/arel): a tinier language that (wants to) compile to risc-v
+- [pebl](https://codeberg.org/dragsbruh/pebl): a tiny risc-v kernel (wip)
+- [arel](https://codeberg.org/dragsbruh/arel): a tinier language that (wants to) compile to risc-v (wip)
 - [lexyc](https://codeberg.org/dragsbruh/lexyc): the beefiest compiler for the second tiniest language (see [xy](https://git.gay/noraaoki/xy))
 - [grall](https://codeberg.org/dragsbruh/grall): byte-byte markov chain runtime
 - [furishell](https://codeberg.org/dragsbruh/shell): my [eww](https://github.com/elkowar/eww) shell control daemon
