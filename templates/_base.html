@@ -74,6 +74,12 @@
 
 {% macro breadcrumb() %}
     <nav class="breadcrumb">
+		{% if not current_path %}
+			{# 404 page #}
+			{% set current_path = "/" %}
+			{% set section = get_section(path="_index.md") %}
+		{% endif %}
+
     	{% set components =
     		"/ufufurina" ~ current_path
     			| trim_start_matches(pat="/")
