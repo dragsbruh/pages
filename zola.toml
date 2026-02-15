@@ -1,0 +1,18 @@
+base_url = "https://furina.is-a.dev/"
+
+compile_sass = true
+build_search_index = false
+
+generate_sitemap = true
+generate_robots_txt = true
+
+[markdown]
+render_emoji = true
+github_alerts = true
+external_links_external = true
+insert_anchor_links = "heading"
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]

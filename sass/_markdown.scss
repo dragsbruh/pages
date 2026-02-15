@@ -1,0 +1,127 @@
+.markdown {
+  line-height: 1.5;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  pre,
+  img,
+  table {
+    margin: 1rem 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.25rem;
+
+    a:hover {
+      color: var(--base) !important;
+    }
+  }
+
+  h1 {
+    color: var(--rosewater);
+
+    &::before {
+      content: "# ";
+    }
+  }
+
+  h2 {
+    color: var(--error);
+
+    &::before {
+      content: "## ";
+    }
+  }
+
+  h3 {
+    color: var(--lavender);
+
+    &::before {
+      content: "### ";
+    }
+  }
+
+  h4 {
+    color: var(--warning);
+
+    &::before {
+      content: "#### ";
+    }
+  }
+
+  h5 {
+    color: var(--success);
+
+    &::before {
+      content: "##### ";
+    }
+  }
+
+  strong {
+    color: var(--teal);
+  }
+
+  em {
+    color: var(--lavender);
+  }
+
+  pre {
+    padding: 0.5rem;
+    border: 0.1rem solid var(--teal);
+
+    &:hover {
+      background-color: var(--pane-light) !important;
+    }
+  }
+
+  code:not(pre code) {
+    color: var(--rosewater);
+    font-weight: bold;
+
+    &:hover {
+      background-color: var(--pane-dark) !important;
+      cursor: pointer;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th,
+    td {
+      border: 0.1rem solid var(--teal);
+      padding: 0.2rem 0.3rem;
+    }
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  blockquote {
+    border-left: 0.33rem solid var(--success);
+
+    padding-left: 1rem;
+    margin: 1rem 0;
+
+    font-style: italic;
+
+    &:hover {
+      background-color: var(--surface0);
+    }
+  }
+
+  hr {
+    margin-bottom: 2rem;
+  }
+}
