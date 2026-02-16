@@ -73,6 +73,11 @@ ul.blog {
 
   li.section {
     margin-top: 12px;
+    padding: 4px;
+
+    div.metadata {
+      margin-bottom: 1rem;
+    }
   }
 }
 

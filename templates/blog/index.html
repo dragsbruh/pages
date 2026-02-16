@@ -6,12 +6,14 @@
     <meta property="og:type" content="website">
 {% endblock %}
 
-{% macro nested_section_pages(sec, emit=true) %}
-    {% if emit %}
+{% macro nested_section_pages(sec) %}
+    {% if sec.pages  %}
         <li class="section">
-            <div>
+            <div class="metadata"">
                 <h4>{{ sec.title }}</h4>
-                <p>{{ sec.description }}</p>
+                <p>
+                    <small>{{ sec.description }}</small>
+                </p>
             </div>
             <ul class="pages">
                 {% for page in sec.pages %}
@@ -25,7 +27,7 @@
 
     {% for sub_path in sec.subsections %}
         {% set sub = get_section(path=sub_path) %}
-        {{ self::nested_section_pages(sec=sub, emit=true) }}
+        {{ self::nested_section_pages(sec=sub) }}
     {% endfor %}
 {% endmacro %}
 

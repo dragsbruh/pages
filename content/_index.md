@@ -19,8 +19,6 @@ of different languages so thats cool. i also have a [homelab](https://hearth.is-
 
 i have moved to [codeberg](https://codeberg.org/dragsbruh) because [github has been shitty](https://ziglang.org/news/migrating-from-github-to-codeberg/) for a while now.
 
-> **notice**: do the words `pbl`/`pebl`/`bitpbl`/`bitpebl` ring a bell? please [contact me](@/socials.md)
-
 you can find me in a lot of places, perhaps my [socials](@/socials.md) will be a good place to start stalking me on.
 
 i may write some stuff on my [blog](@/blog/_index.md) sometimes so go check it out!
@@ -52,3 +50,5 @@ i dont really mind what pronouns you use tbh, just use whatever makes you feel g
 [thusuzzee](https://z1.gg)
 [ajr](https://github.com/ajr-dev)
 [anw](https://anw.is-a.dev)
+
+> **notice**: are you pbl? please [contact me](@/socials.md)

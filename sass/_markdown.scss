@@ -1,11 +1,7 @@
 .markdown {
-  line-height: 1.5;
+  line-height: 1.75; /* or even 1.8 for body text */
 
-  p {
-    margin: 0.25rem 0;
-  }
-
-  h1,
+  .markdown h1,
   h2,
   h3,
   h4,
@@ -14,7 +10,11 @@
   pre,
   img,
   table {
-    margin: 1rem 0;
+    margin: 1.5rem 0; /* or 2rem for h1/h2 */
+  }
+
+  .markdown p {
+    margin: 0.5rem 0; /* a bit more breathing room */
   }
 
   h1,
@@ -23,7 +23,11 @@
   h4,
   h5,
   h6 {
-    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+
+    a {
+      text-decoration: none;
+    }
 
     a:hover {
       color: var(--base) !important;
@@ -32,6 +36,7 @@
 
   h1 {
     color: var(--rosewater);
+    font-size: 2rem;
 
     &::before {
       content: "# ";
@@ -40,6 +45,7 @@
 
   h2 {
     color: var(--error);
+    font-size: 1.75rem;
 
     &::before {
       content: "## ";
@@ -48,6 +54,7 @@
 
   h3 {
     color: var(--lavender);
+    font-size: 1.5rem;
 
     &::before {
       content: "### ";
@@ -56,6 +63,7 @@
 
   h4 {
     color: var(--warning);
+    font-size: 1.25rem;
 
     &::before {
       content: "#### ";
@@ -64,15 +72,20 @@
 
   h5 {
     color: var(--success);
+    font-size: 1.125rem;
 
     &::before {
       content: "##### ";
     }
   }
 
-  ul,
-  ol {
-    list-style-position: inside;
+  h5 {
+    color: var(--success);
+    font-size: 1rem;
+
+    &::before {
+      content: "###### ";
+    }
   }
 
   strong {
@@ -120,8 +133,8 @@
   blockquote {
     border-left: 0.33rem solid var(--success);
 
-    padding-left: 1rem;
-    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
 
     font-style: italic;
 

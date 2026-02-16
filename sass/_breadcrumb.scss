@@ -23,11 +23,13 @@
       display: block;
       padding: 0 20px;
 
+      text-decoration: none;
+
       background-color: var(--success);
       color: var(--base);
 
       &:hover {
-        opacity: 75%;
+        background-color: var(--teal);
       }
 
       &:not(li a) {
@@ -48,13 +50,6 @@
         margin-top: 10px;
 
         text-align: start;
-
-        background-color: var(--success);
-        color: var(--base);
-
-        &:hover {
-          opacity: 75%;
-        }
       }
     }
 

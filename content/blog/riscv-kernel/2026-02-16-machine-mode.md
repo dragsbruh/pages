@@ -292,5 +292,5 @@ you might want to revisit this page and make delegations or memory stricter, per
 - <https://github.com/riscv-software-src/opensbi/blob/master/lib/sbi/sbi_hart.c>
 
 > [!TIP]
-> the opensbi implementation i linked was a godsend to me to switch from m-mode to s-mode
+> TIP: the opensbi implementation i linked was a godsend to me to switch from m-mode to s-mode
 > consider going thru it
