@@ -6,9 +6,22 @@ extra:
   hero: /heroes/riscv-kernel/2026-02-16-machine-mode.jpg
 ---
 
+## overview
+
+qemu virt machine drops us into machine mode (m-mode). the first step usually for most kernels is to
+get into supervisor mode (s-mode).
+
+at a higher level, switching to supervisor mode from here involves:
+
+- delegating necessary traps to s-mode and setup handler
+- disabling physical memory protection for s-mode
+- setting previous privilege (`MPP`) to s-mode
+- setting return address (`mepc` register) to kernel main function
+- returning to "_previous privilege_" (s-mode here) using `mret` instruction
+
 ## setting up the stack pointer
 
-make sure the linker script has space reserved for the two:
+make sure the linker script has space reserved for the stack pointer and global pointer:
 
 ```ld
   .stack (NOLOAD) : ALIGN(16)
@@ -29,33 +42,20 @@ make sure the linker script has space reserved for the two:
     la       gp, __global_pointer
 ```
 
-## overview
+global pointer is used to offset global variables, and i recommend setting it up anyway.
 
-qemu virt machine drops us into machine mode (m-mode), and the first step really is to quickly
-get into supervisor mode (s-mode) for most kernels.
+## machine trap delegations
 
-on a higher level, switching to supervisor mode from here is to:
-
-- delegate necessary traps to s-mode and setup handler
-- disable physical memory protection for s-mode
-- set previous privilege (`MPP`) to s-mode
-- set return address (`mepc` register) to kernel main function
-- return to "_previous privilege_" (s-mode here) using `mret` instruction
-
-## machine trap delegation
-
-traps are normally all handled by m-mode at this stage, but for our kernel we want them to
-be handled at s-mode. this can be done by redirecting necessary traps using their delegation
-registers.
+all traps handled by m-mode at this stage, but for our kernel we want them to be handled by s-mode.
+this can be done by redirecting necessary traps using delegation registers.
 
 ### traps - exceptions
 
-exceptions are synchronous and caused by the current instruction being executed. such as page faults,
-ecalls, etc, and delegation is done by `medeleg` register.
+exceptions are synchronous and are caused by the current instruction being executed.
+delegation of these traps is done by `medeleg` register.
 
 each bit in the `medeleg`, if set, delegates a particular exception cause to s-mode.
-
-exception causes include stuff like:
+exception causes include:
 
 - load page fault
 - store page fault
@@ -69,14 +69,13 @@ exception causes include stuff like:
     csrw     medeleg, t0
 ```
 
-above code delegates _all_ exceptions to s-mode, you may want to skip stuff like m-mode and s-mode ecalls etc
-later, but this is fine for now.
+this delegates _all_ base exceptions to s-mode, you might want to skip a few exceptions like
+m-mode ecalls, s-mode ecalls later, but this is fine for now.
 
 ### traps - interrupts
 
-traps are asynchronous, they are caused by hardware.
-
-there are really 3 interrupts, and a variant of those 3 interrupts for each privilege level.
+traps are asynchronous, and are caused by hardware. there are 3 main types, with
+variants for each privilege level:
 
 - **MSIP/SSIP:** software interrupts, ex: inter-cpu interrupts
 - **MTIP/STIP:** timer interrupts
@@ -87,19 +86,19 @@ there are really 3 interrupts, and a variant of those 3 interrupts for each priv
     csrw     mideleg, t0
 ```
 
-this will delegate all interrupt handling to s-mode. note that u-mode interrupts are extremely rare and
-i recommend ignoring them unless its a requirement.
+this delegates all interrupt handling to s-mode. u-mode interrupts are extremely rare, so
+you can safely ignore them unless needed.
 
 ### setting up trap handler
 
-`stvec` cs register should contain the s-mode trap handler address:
+the `stvec` csr should contain the s-mode trap handler address:
 
 ```asm
     la       t0, stvec_handler
     csrw     stvec, t0
 ```
 
-i like to zero these registers too:
+i also like to zero these registers:
 
 ```asm
     csrw     sscratch, 0
@@ -112,10 +111,10 @@ to enable all interrupts in s-mode:
     csrw     sie, 0x7
 ```
 
-## disable physical memory protection
+## disabling physical memory protection
 
-i had so much trouble figuring out why i couldnt access memory, turns out m-mode mommy needs to disable
-physical memory protection to give s-mode full access here:
+i had a lot of trouble figuring out why i couldnt access memory in s-mode, turns out m-mode mommy needs to disable
+physical memory protection for s-mode:
 
 ```asm
     li       t0, -1
@@ -128,11 +127,11 @@ physical memory protection to give s-mode full access here:
 here, `-1` enables all bits, and since `pmpaddrN` stores `addr >> 2`, thats the highest memory address.
 
 and `pmpcfg0` in above code has `0x0F` which is RWX on all memory in `TOR` (top-of-range) mode,
-so those two paired gives s-mode RWX access on all the memory.
+so paired together they give s-mode RWX access on all available memory.
 
 ## preparing to jump to s-mode
 
-we need to set the MPP bits in `mstatus` register to match s-mode, which is set the two MPP bits to `01`
+set the MPP bits in `mstatus` register to s-mode (`01`):
 
 ```asm
     csrr     t0, mstatus
@@ -146,14 +145,14 @@ we need to set the MPP bits in `mstatus` register to match s-mode, which is set 
     csrw     mstatus, t0
 ```
 
-then store the _"return"_ address in `mepc` register, basically our kernel main function.
+then store the kernel main function address in `mepc` register:
 
 ```asm
     la       t0, kmain
     csrw     mepc, t0
 ```
 
-note that, kmain should be a noreturn function if using c or other languages.
+> kmain should be a noreturn function if using c or other languages.
 
 ## jumping to s-mode
 
@@ -161,7 +160,7 @@ note that, kmain should be a noreturn function if using c or other languages.
     mret
 ```
 
-as simple as that, if all goes well congrats you are in s-mode!
+as simple as that, if all goes well then congrats! you are in s-mode!
 
 ## testing
 
