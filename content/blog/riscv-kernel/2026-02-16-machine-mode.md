@@ -24,7 +24,7 @@ make sure the linker script has space reserved for the two:
 
 16K stack is enough for a small kernel.
 
-```gas
+```asm
     la       sp, __stack_top
     la       gp, __global_pointer
 ```
@@ -64,7 +64,7 @@ exception causes include stuff like:
 - u-mode ecall
 - etc...
 
-```gas
+```asm
     li       t0, 0xffff
     csrw     medeleg, t0
 ```
@@ -82,7 +82,7 @@ there are really 3 interrupts, and a variant of those 3 interrupts for each priv
 - **MTIP/STIP:** timer interrupts
 - **MEIP/SEIP:** external interrupts, ex: [PLIC](https://docs.riscv.org/reference/hardware/plic/_attachments/riscv-plic.pdf)
 
-```gas
+```asm
     li       t0, 0x222
     csrw     mideleg, t0
 ```
@@ -94,21 +94,21 @@ i recommend ignoring them unless its a requirement.
 
 `stvec` cs register should contain the s-mode trap handler address:
 
-```gas
+```asm
     la       t0, stvec_handler
     csrw     stvec, t0
 ```
 
 i like to zero these registers too:
 
-```gas
+```asm
     csrw     sscratch, 0
     csrw     satp, 0
 ```
 
 to enable all interrupts in s-mode:
 
-```gas
+```asm
     csrw     sie, 0x7
 ```
 
@@ -117,7 +117,7 @@ to enable all interrupts in s-mode:
 i had so much trouble figuring out why i couldnt access memory, turns out m-mode mommy needs to disable
 physical memory protection to give s-mode full access here:
 
-```gas
+```asm
     li       t0, -1
     csrw     pmpaddr0, t0
 
@@ -134,7 +134,7 @@ so those two paired gives s-mode RWX access on all the memory.
 
 we need to set the MPP bits in `mstatus` register to match s-mode, which is set the two MPP bits to `01`
 
-```gas
+```asm
     csrr     t0, mstatus
 
     li       t1, ~(3 << 11)       # clear MPP so the first MPP bit is always off
@@ -148,7 +148,7 @@ we need to set the MPP bits in `mstatus` register to match s-mode, which is set 
 
 then store the _"return"_ address in `mepc` register, basically our kernel main function.
 
-```gas
+```asm
     la       t0, kmain
     csrw     mepc, t0
 ```
@@ -157,7 +157,7 @@ note that, kmain should be a noreturn function if using c or other languages.
 
 ## jumping to s-mode
 
-```gas
+```asm
     mret
 ```
 
@@ -207,7 +207,7 @@ boot.o: boot.s
 
 ### full code
 
-```gas
+```asm
     .section .init
 
 _init:
