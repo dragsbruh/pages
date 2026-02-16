@@ -12,5 +12,4 @@ extra:
     - pages
 ---
 
-if youre wondering what this is, dw its just random stuff. infact once i get an actual blog post,
-[meow](@/blog/2026-02-14-meow.md) will be moved to this section.
+if youre wondering what this is, dw its just random stuff.
