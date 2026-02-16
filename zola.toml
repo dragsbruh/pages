@@ -3,10 +3,13 @@ base_url = "https://furina.is-a.dev"
 compile_sass = true
 build_search_index = false
 
+generate_feeds = true
 generate_sitemap = true
 generate_robots_txt = true
 
 minify_html = true
+
+feed_filenames = ["atom.xml", "rss.xml"]
 
 [markdown]
 render_emoji = true
