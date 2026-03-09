@@ -1,13 +1,13 @@
 {% extends "_markdown.html" %}
 
 {% block opengraph %}
-    {{ super() }}
+	{{ super() }}
 
-    {% if section %}
-        {% set page = section %}
-    {% endif %}
+	{% if section %}
+		{% set page = section %}
+	{% endif %}
 
-    <meta property="article:published_time" content="{{ page.date }}">
-    <meta property="article:author" content="dragsbruh">
-    <meta property="og:type" content="article">
+	<meta property="article:published_time" content="{{ page.date }}">
+	<meta property="article:author" content="dragsbruh">
+	<meta property="og:type" content="article">
 {% endblock %}

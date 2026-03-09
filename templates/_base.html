@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-  
+
 		<meta name="theme-color" content="#cba6f7">
 
 		{% block rss %}
@@ -10,20 +10,20 @@
 		{% endblock %}
 
 		{% block opengraph %}
-    		{% if section %}
-    		    {% set page = section %}
-    		{% endif %}
+			{% if section %}
+				{% set page = section %}
+			{% endif %}
 
-    		<title>ufufurina - {{ page.title }}</title>
-    		<meta name="description" content="{{ page.description }}" />
+			<title>ufufurina - {{ page.title }}</title>
+			<meta name="description" content="{{ page.description }}">
 			<link rel="icon" href="/avatar.jpg">
-			
-    		<meta property="og:site_name" content="ufufurina">
 
-    		<meta property="og:title" content="{{ page.title }}">
-    		<meta property="og:description" content="{{ page.description }}">
-    		<meta property="og:url" content="{{ page.permalink }}">
-	
+			<meta property="og:site_name" content="ufufurina">
+
+			<meta property="og:title" content="{{ page.title }}">
+			<meta property="og:description" content="{{ page.description }}">
+			<meta property="og:url" content="{{ page.permalink }}">
+
 			<meta name="twitter:title" content="{{ page.title }}">
 			<meta name="twitter:description" content="{{ page.description }}">
 
@@ -31,16 +31,16 @@
 
 			{% set image = "/avatar.jpg" %}
 
-    		{% if page.extra.hero %}
+			{% if page.extra.hero %}
 				<meta name="twitter:card" content="summary_large_image">
 				{% set image = page.extra.hero %}
 			{% else %}
-    		    <meta name="twitter:card" content="summary">
+				<meta name="twitter:card" content="summary">
 
 				{% if page.extra.avatar %}
 					{% set image = page.extra.avatar %}
 				{% endif %}
-    		{% endif %}
+			{% endif %}
 
 			{% if image is starting_with("/") %}
 				{% set image = config.base_url ~ image %}
@@ -50,7 +50,7 @@
 			<meta property="og:image" content="{{ image }}">
 		{% endblock %}
 
-		<link rel="stylesheet" href="/styles.css" />
+		<link rel="stylesheet" href="/styles.css">
 
 		<link rel="preconnect" href="https://rsms.me/">
 		<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
@@ -60,7 +60,7 @@
   		  data-website-id="519a9532-1ae3-424e-b6dd-97a137fbe549">
   		</script>
 	</head>
-	
+
 	<body>
 		{{ self::breadcrumb() }}
 
@@ -70,9 +70,9 @@
 				{% endblock %}
 
 
-    			<a href="https://notbyai.fyi" class="plain notbyai" title="rest assured, what youre seeing is slop-free">
-    			    <img src="/notbyai/dark.svg" alt="badge for not-by-ai">
-    			</a>
+				<a href="https://notbyai.fyi" class="plain notbyai" title="rest assured, what youre seeing is slop-free">
+					<img src="/notbyai/dark.svg" alt="badge for not-by-ai">
+				</a>
 			</section>
 		</div>
 
@@ -85,46 +85,46 @@
 </html>
 
 {% macro breadcrumb() %}
-    <nav class="breadcrumb">
+	<nav class="breadcrumb">
 		{% if not current_path %}
 			{# 404 page #}
 			{% set current_path = "/" %}
 			{% set section = get_section(path="_index.md") %}
 		{% endif %}
 
-    	{% set components =
-    		"/ufufurina" ~ current_path
-    			| trim_start_matches(pat="/")
-    			| trim_end_matches(pat="/")
-    			| split(pat="/")
-    	%}
-        
-    	{% set_global acc = "" %}
-    	{% for component in components %}
-    		{% if not loop.first %}
-    			{% set_global acc = acc ~ "/" ~ component %}
-    		{% endif %}
+		{% set components =
+			"/ufufurina" ~ current_path
+				| trim_start_matches(pat="/")
+				| trim_end_matches(pat="/")
+				| split(pat="/")
+		%}
 
-    		{% set dropdown = "none" %}
+		{% set_global acc = "" %}
+		{% for component in components %}
+			{% if not loop.first %}
+				{% set_global acc = acc ~ "/" ~ component %}
+			{% endif %}
 
-    		{% if loop.last %}
-    			{% if page and page.extra.dropdown %}
-    				{% set dropdown = page.extra.dropdown %}
-    			{% elif section and section.extra.dropdown %}
-    				{% set dropdown = section.extra.dropdown %}
-    			{% endif %}
-    		{% else %}
-    			{% set section_path = acc ~ "/_index.md" %}
-    			{% set section = get_section(path=section_path | trim_start_matches(pat="/")) %}
+			{% set dropdown = "none" %}
 
-    			{% if section.extra.dropdown %}
-    				{% set dropdown = section.extra.dropdown %}
-    			{% endif %}
-    		{% endif %}
+			{% if loop.last %}
+				{% if page and page.extra.dropdown %}
+					{% set dropdown = page.extra.dropdown %}
+				{% elif section and section.extra.dropdown %}
+					{% set dropdown = section.extra.dropdown %}
+				{% endif %}
+			{% else %}
+				{% set section_path = acc ~ "/_index.md" %}
+				{% set section = get_section(path=section_path | trim_start_matches(pat="/")) %}
 
-    		{% set_global dropdown_items = [] %}
+				{% if section.extra.dropdown %}
+					{% set dropdown = section.extra.dropdown %}
+				{% endif %}
+			{% endif %}
 
-    		{% if dropdown != "none" %}
+			{% set_global dropdown_items = [] %}
+
+			{% if dropdown != "none" %}
 				{% for item in dropdown %}
 					{% if item == "pages" %}
 						{% for page in section.pages %}
@@ -132,18 +132,18 @@
 						{% endfor %}
 					{% elif item == "subsections" %}
 						{% for subsection in section.subsections %}
-    						{% set sub = get_section(path=subsection) %}
-    						{% set_global dropdown_items = dropdown_items | concat(with=sub)%}
+							{% set sub = get_section(path=subsection) %}
+							{% set_global dropdown_items = dropdown_items | concat(with=sub)%}
 						{% endfor %}
 					{% else %}
 						{% set_global dropdown_items = dropdown_items | concat(with=item) %}
 					{% endif %}
 				{% endfor %}
-    		{% endif %}
-        
+			{% endif %}
+
 			<div>
-    			<a href="{{ '/' ~ acc | replace(from='//', to='/') }}">
-					{{ component }}			
+				<a href="{{ '/' ~ acc | replace(from='//', to='/') }}">
+					{{ component }}
 				</a>
 
 				<ul>
@@ -154,6 +154,6 @@
 					{% endfor %}
 				</ul>
 			</div>
-    	{% endfor %}
-    </nav>
+		{% endfor %}
+	</nav>
 {% endmacro %}
