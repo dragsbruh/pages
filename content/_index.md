@@ -14,7 +14,7 @@ extra:
       permalink: https://discord.gg/2DDTk9UQMz
 ---
 
-hi there hello! i like to code and stuff. i primarily use [zig](https://ziglang.org) or [go](https://go.dev) but have used tons
+hi there hello! i like to code and stuff. i primarily use [zig](https://ziglang.org) or [golang](https://go.dev) but have used tons
 of different languages so thats cool. i also have a [homelab](https://hearth.is-a.dev) so go tinker with it.
 
 i have moved to [codeberg](https://codeberg.org/dragsbruh) because [github has been shitty](https://ziglang.org/news/migrating-from-github-to-codeberg/) for a while now.
