@@ -30,7 +30,7 @@
 			<a href="$site.page('').link()">furina</a>
 			<a href="$site.page('blog').link()">blog</a>
 			<a href="$site.page('socials').link()">socials</a>
-			<a href="https://codeberg.org/dragsbruh">codeberg</a>
+			<a href="https://codeberg.org/dragsbruh" rel="_blank">codeberg</a>
 		</nav>
 
 		<main id="main">
