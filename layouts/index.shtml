@@ -1,0 +1,15 @@
+<extend template="base.shtml">
+
+<head id="head">
+	<meta property="og:image" content="$site.asset('avatar.png').link()">
+	<meta property="og:image:alt" content="thats furina">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="$site.asset('avatar.png').link()">
+	<meta name="twitter:image:alt" content="thats furina">
+</head>
+
+<main id="main">
+	<h1 :text="$page.title"></h1>
+	<div :html="$page.content()"></div>
+</main>

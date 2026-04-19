@@ -1,0 +1,13 @@
+Site {
+    .title = "furina's stuff",
+    .host_url = "https://furina.is-a.dev",
+    .content_dir_path = "content",
+    .layouts_dir_path = "layouts",
+    .assets_dir_path = "assets",
+    .static_assets = [
+        "fonts/SerrifVF.woff2",
+        ".well-known/discord",
+        ".well-known/atproto-did",
+        ".domains",
+    ],
+}

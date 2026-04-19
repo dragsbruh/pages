@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+	<head id="head">
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1">
+		<title :text="$site.title"></title>
+
+		<link rel="stylesheet" href="$site.asset('styles.css').link()">
+
+		<meta name="twitter:site" content="@legendragswt">
+		<meta name="twitter:creator" content="@legendragswt">
+
+		<meta property="og:site_name" content="furina">
+		<meta property="og:url" content="$page.link()">
+
+		<meta property="og:title" content="$page.title">
+		<meta property="og:description" content="$page.description">
+
+		<meta property="og:type" content="website">
+
+		<meta name="twitter:title" content="$page.title">
+		<meta name="twitter:description" content="$page.description">
+
+		<super>
+	</head>
+
+	<body id="body">
+		<nav id="navbar">
+			<a href="$site.page('').link()">furina</a>
+			<a href="$site.page('blog').link()">blog</a>
+			<a href="$site.page('socials').link()">socials</a>
+			<a href="https://codeberg.org/dragsbruh">codeberg</a>
+		</nav>
+
+		<main id="main">
+			<super>
+		</main>
+
+		<footer id="footer">
+			<sub>
+				&#169; 2026 dragsbruh. content licensed under
+				<a href="https://opensource.org/license/bsd-2-clause" target="_blank">
+					BSD-2-Clause
+				</a>
+				unless mentioned otherwise.
+			</sub>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+---
+.title = "hi there hello",
+.description = "streaming soon?",
+.date = @date("2026-04-16"),
+.author = "dragsbruh",
+.layout = "index.shtml",
+.draft = false,
+--- 
+
+call me furina and im a student who likes to code and stuff,
+
+## languages
+
+recently ive taken a liking for C. either way, heres the languages that i like
+and use constantly:
+
+- c99: the bestest language ever
+- [zig](https://ziglang.org/): i really love where theyre going with this
+- [golang](https://go.dev/): convenient for big projects, has its drawbacks
+- posix shell: the one to join them all
+
+and heres some more that i have adequate experience with:
+
+- [rust](https://rust-lang.org/): its fast, and if you like pain its also safe
+- [python3](https://python.org/): i just used it for 3 whole years straight im
+  good at it i think
+
+and some miscancellous generic stuff like:
+
+- generic webdev stuff like html/css/js
+- better webdev stuff like ts/scss/[tailwind](https://tailwindcss.com/)
+- frameworks like [svelte](https://svelte.dev/)
+  (+[sveltekit](https://svelte.dev/docs/kit/introduction)),
+  [solidjs](https://solidjs.org/), and [astro](https://astro.build/)
+
+## cool projects
+
+- [pebl](https://codeberg.org/dragsbruh/pebl/): a tiny kernel in C for
+  [RISC-V architecture](https://riscv.org/) (cross-arch support soon?)
+- [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for
+(byte-level) [markov chains](https://en.wikipedia.org/wiki/Markov_chain)
+- [lexyc](https://codeberg.org/dragsbruh/lexyc/): x86(64) compiler for a
+  turing-complete esoteric programming language in zig
+  ([see original](https://git.gay/noraaoki/xy))
+- [brainfucc](https://codeberg.org/dragsbruh/brainfucc/): a brainfuck compiler
+in C targeting the greatest architecture: RISC-V
+
+### miscancellous projects
+
+- [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror/): a
+  [community mirror](https://ziglang.org/news/announcing-community-mirrors/)
+  for downloading zig written in posix shell
+- [yurisync](https://codeberg.org/dragsbruh/yurisync/): a generic bluesky media
+  sync tool that i branded with yuri because yuri is very important
+- [gopresence](https://codeberg.org/dragsbruh/gopresence/): discord presence
+  library for golang programs (cross platform, and doesnt suck)
+
+## interests
+
+eh its more like i randomly start doing stuff but generally most
+of my likings can be classified into:
+
+- networking: anything that involves two devices communicating
+- graphics: started learning opengl and its awesome
+- osdev: recently dipped my pinky toe into this, and let me tell you, its
+  awesome. you should really try it out
+- creatures of steel
+
+### setup
+
+i main [void linux](https://voidlinux.org/) and i love it. i
+use the [niri](https://niri-wm.github.io/niri/) window manager, and primarily
+[helix](http://helix-editor.com/) text editor/IDE.
+
+i had a homelab setup on an old laptop but rn its offline. it would otherwise
+be available with reasonable uptime on this domain, as well as on the alt url
+https://focalors.pp.ua
+
+## cool people
+
+> PUBLIC SERVIS ANNOUNCEMTN:
+> are you PBL? please [contact me]($link.page('socials'))
+
+[skyexplorewt](https://skyexplorewt.xyz)
+[pbl](https://pbl.is-a.dev)
+[nora](https://nora.stabbed.me)
+[orangc](https://orangc.net)
+[shiroi](https://shiroinekotfs.github.io)
+[iostpa](https://iostpa.com)
+[plo](https://ploszukiwacz.is-a.dev)
+[thusuzzee](https://z1.gg)
+[ajr](https://github.com/ajr-dev)
+
+[]($section.attrs('badges'))
+##
+
+[![](/88x31/fren/anw.png)](https://anw.is-a.dev)
+
+[]($section.attrs("badges"))
+## meow meow
+
+![](/88x31/blink.gif)
+![](/88x31/bluepantsu.gif)
+![](/88x31/killmenow.gif)
+![](/88x31/meiling.gif)
+![](/88x31/estrogen.gif)
+![](/88x31/transnya.png)
+![](/88x31/nekoscape.gif)
+![](/88x31/girlsnow.png)
+![](/88x31/skirt.gif)
+[![](/88x31/noweb32.gif)](https://yesterweb.org/no-to-web3/)
+![](/88x31/nft.gif)
+![](/88x31/capitalism.png)
+[![](/88x31/microslop.gif)](https://microslop.com/)
+![](/88x31/speech.gif)
+![](/88x31/linux.gif)
+[![](/88x31/codeberg.gif)](https://codeberg.org/)
+[![](/88x31/repair.jpg)](https://consumerrights.wiki/w/Main_Page)
+![](/88x31/thevoid.gif)
+[![](/88x31/meltice.gif)](https://www.youtube.com/watch?v=7AQbhes-Ntw)
+[![](/88x31/ukraine.gif)](https://u24.gov.ua/)
+[![](/88x31/palestine.gif)](https://www.map.org.uk/)
+[![](/88x31/antifa.gif)](https://archive.org/details/zines-anti-fascism)

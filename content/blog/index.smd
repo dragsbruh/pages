@@ -1,0 +1,11 @@
+---
+.title = "blog",
+.date = @date("2026-04-17"),
+.author = "dragsbruh",
+.layout = "blog.shtml",
+.draft = false,
+--- 
+
+hi yes i write stuff sometimes, pretty cool, right?
+
+> **TODO**: write stuff
