@@ -1,5 +1,6 @@
 ---
 .title = "blog",
+.description = "might write something sometimes maybe",
 .date = @date("2026-04-17"),
 .author = "dragsbruh",
 .layout = "blog.shtml",
