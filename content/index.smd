@@ -14,10 +14,11 @@ call me furina and im a student who likes to code and stuff,
 recently ive taken a liking for C. either way, heres the languages that i like
 and use constantly:
 
-- c99: the bestest language ever
+- [c99](https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf): the bestest language ever
 - [zig](https://ziglang.org/): i really love where theyre going with this
 - [golang](https://go.dev/): convenient for big projects, has its drawbacks
-- posix shell: the one to join them all
+- [posix shell](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html):
+  the one to join them all
 
 and heres some more that i have adequate experience with:
 
@@ -28,7 +29,8 @@ and heres some more that i have adequate experience with:
 and some miscancellous generic stuff like:
 
 - generic webdev stuff like html/css/js
-- better webdev stuff like ts/scss/[tailwind](https://tailwindcss.com/)
+- better webdev stuff like [ts](https://www.typescriptlang.org/),
+  [scss](https://sass-lang.com/) and [tailwind](https://tailwindcss.com/)
 - frameworks like [svelte](https://svelte.dev/)
   (+[sveltekit](https://svelte.dev/docs/kit/introduction)),
   [solidjs](https://solidjs.org/), and [astro](https://astro.build/)
