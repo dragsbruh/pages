@@ -71,8 +71,9 @@ of my likings can be classified into:
 ### setup
 
 i main [void linux](https://voidlinux.org/) and i love it. i
-use the [niri](https://niri-wm.github.io/niri/) window manager, and primarily
-[helix](http://helix-editor.com/) text editor/IDE.
+use the [sway](https://swaywm.org/) window manager, and primarily
+[helix](http://helix-editor.com/) text editor/IDE. otherwise
+[zed](https://zed.dev/).
 
 i had a homelab setup on an old laptop but rn its offline. it would otherwise
 be available with reasonable uptime on this domain, as well as on the alt url
