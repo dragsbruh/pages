@@ -1,0 +1,158 @@
+:root {
+  --color-bg: #0f0f0f;
+  --color-text: #e0e0e0;
+  --color-link: #9f7aea;
+  --color-border: #eecefe22;
+}
+
+@font-face {
+  font-family: Serrif;
+  src:
+    url(/fonts/SerrifVF.woff2) format("woff2 supports variations"),
+    url(/fonts/SerrifVF.woff2) format("woff2-variations");
+
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
+
+  font-size: 20px;
+  font-family: "Serrif", serif;
+  font-feature-settings:
+    "calt" 1,
+    "liga" 1;
+}
+
+nav#navbar {
+  width: 100%;
+  padding: 12px 0;
+
+  gap: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-bottom: 1px solid var(--color-border);
+}
+
+main {
+  flex-grow: 1;
+
+  width: 100%;
+  padding: 0 24px;
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 67%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+footer {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+a:not(:has(img)) {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover:not(:has(img)) {
+  color: var(--color-bg);
+  background-color: var(--color-text);
+}
+
+.column-list {
+  display: flex;
+  flex-direction: column;
+}
+
+blockquote {
+  margin: 0;
+  padding: 2px 0;
+  padding-left: 22px;
+  border-left: 2px solid var(--color-link);
+}
+
+blockquote:hover {
+  padding-left: 20px;
+  border-left-width: 4px;
+}
+
+li {
+  position: relative;
+
+  list-style: none;
+  list-style-position: outside;
+}
+
+li::before {
+  content: " ";
+
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+
+  position: absolute;
+  left: -1rem;
+  top: 0.5rem;
+
+  background-color: var(--color-link);
+
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* 
+.badges p {
+  display: inline;
+  margin-right: 0.5em;
+} */
+
+.badges img:hover {
+  transform: translateY(-4px);
+  transition: 0.075s linear;
+  cursor: pointer;
+}
