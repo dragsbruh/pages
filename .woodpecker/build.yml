@@ -1,0 +1,34 @@
+when:
+  branch: main
+
+steps:
+  build:
+    image: alpine
+    commands:
+      - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.11.2/x86_64-linux-musl.tar.xz
+      - tar xJf zine.tar.xz
+      - ./zine release -o .build/
+    when:
+      event: push
+
+  publish:
+    image: alpine/git
+    environment:
+      CODEBERG_TOKEN:
+        from_secret: "codeberg_token"
+    commands:
+      - git config --global user.email "ci@furina.is-a.dev"
+      - git config --global user.name "Woodpecker CI"
+
+      - git clone --branch pages https://$${CODEBERG_TOKEN}@codeberg.org/$CI_REPO.git .publish
+      - cd .publish
+
+      - git rm -r . || true
+      - cp -a ../.build/. .
+
+      - git add --all
+      - git commit -m "Woodpecker CI ${CI_COMMIT_SHA}" --allow-empty
+      - git push
+    when:
+      event: [push]
+    depends_on: build
