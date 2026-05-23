@@ -1,6 +1,6 @@
 ---
 .title = "hi there hello",
-.description = "streaming soon?",
+.description = "i code and stuff, sometimes, or maybe often",
 .date = @date("2026-04-16"),
 .author = "dragsbruh",
 .layout = "index.shtml",
@@ -15,13 +15,13 @@ recently ive taken a liking for C. either way, heres the languages that i like
 and use constantly:
 
 - [c99](https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf): the bestest language ever
-- [zig](https://ziglang.org/): i really love where theyre going with this
-- [golang](https://go.dev/): convenient for big projects, has its drawbacks
-- [posix shell](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html):
-  the one to join them all
+- [zig](https://ziglang.org/): second bestest language ever, 1.0 tomorrow
+- [posix shell](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
 
 and heres some more that i have adequate experience with:
 
+- [golang](https://go.dev/): mostly for web projects because it has an awesome
+  concurrency model and all that.
 - [rust](https://rust-lang.org/): its fast, and if you like pain its also safe
 - [python3](https://python.org/): i just used it for 3 whole years straight im
   good at it i think
@@ -29,7 +29,7 @@ and heres some more that i have adequate experience with:
 and some miscellaneous generic stuff like:
 
 - generic webdev stuff like html/css/js
-- better webdev stuff like [ts](https://www.typescriptlang.org/),
+- better webdev stuff like [typescript](https://www.typescriptlang.org/),
   [scss](https://sass-lang.com/) and [tailwind](https://tailwindcss.com/)
 - frameworks like [svelte](https://svelte.dev/)
   (+[sveltekit](https://svelte.dev/docs/kit/introduction)),
@@ -37,8 +37,10 @@ and some miscellaneous generic stuff like:
 
 ## cool projects
 
+- [schism](https://codeberg.org/dragsbruh/schism): a cli minecraft launcher
+  written in zig. (WIP)
 - [pebl](https://codeberg.org/dragsbruh/pebl/): a tiny kernel in C for
-  [RISC-V architecture](https://riscv.org/) (cross-arch support soon?)
+  [RISC-V architecture](https://riscv.org/) (WIP)
 - [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for
 (byte-level) [markov chains](https://en.wikipedia.org/wiki/Markov_chain)
 - [lexyc](https://codeberg.org/dragsbruh/lexyc/): x86(64) compiler for a
@@ -52,10 +54,13 @@ in C targeting the greatest architecture: RISC-V
 - [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror/): a
   [community mirror](https://ziglang.org/news/announcing-community-mirrors/)
   for downloading zig written in posix shell
+- [judgementdaysimulator](https://codeberg.org/dragsbruh/judgementdaysimulator):
+  JUDGEMENT! CRUSH! (random stuff in c/opengl)
 - [yurisync](https://codeberg.org/dragsbruh/yurisync/): a generic bluesky media
   sync tool that i branded with yuri because yuri is very important
 - [gopresence](https://codeberg.org/dragsbruh/gopresence/): discord presence
   library for golang programs (cross platform, and doesnt suck)
+- [clispy](https://codeberg.org/dragsbruh/clispy/): a tiny lisp-like language.
 
 ## interests
 
@@ -71,34 +76,33 @@ of my likings can be classified into:
 
 ### setup
 
-i main [void linux](https://voidlinux.org/) and i love it. i
-use the [sway](https://swaywm.org/) window manager, and primarily
-[helix](http://helix-editor.com/) text editor/IDE. otherwise
-[zed](https://zed.dev/).
+- operating system: [void linux](https://voidlinux.org/)
+- window manager: [sway](https://swaywm.org/).
+- text editor/ide: [helix](https://helix-editor.com/)
+- ci/cid: [woodpecker ci](https://woodpecker-ci.org/)
 
 i had a homelab setup on an old laptop but rn its offline. it would otherwise
 be available with reasonable uptime on this domain, as well as on the alt url
 https://focalors.pp.ua
+
+when its fully restored, there'd be [selfhosted ci](https://ci.furina.is-a.dev/)
+and [git](https://git.furina.is-a.dev/) for my other projects.
 
 ## cool people
 
 > PUBLIC SERVIS ANNOUNCEMTN:
 > are you PBL? please [contact me]($link.page('socials'))
 
-[skyexplorewt](https://skyexplorewt.xyz)
-[pbl](https://pbl.is-a.dev)
-[nora](https://nora.stabbed.me)
-[orangc](https://orangc.net)
-[shiroi](https://shiroinekotfs.github.io)
-[iostpa](https://iostpa.com)
-[plo](https://ploszukiwacz.is-a.dev)
-[thusuzzee](https://z1.gg)
-[ajr](https://github.com/ajr-dev)
-
-[]($section.attrs('badges'))
-##
-
-[![](/88x31/fren/anw.png)](https://anw.is-a.dev)
+[skyexplorewt](https://skyexplorewt.xyz/)
+[pbl](https://pbl.is-a.dev/)
+[nora](https://nora.stabbed.me/)
+[orangc](https://orangc.net/)
+[iostpa](https://iostpa.com/)
+[shiroi](https://shiroinekotfs.github.io/)
+[plo](https://ploszukiwacz.is-a.dev/)
+[thusuzzee](https://z1.gg/)
+[ajr](https://github.com/ajr-dev/)
+[anw)](https://anw.is-a.dev/)
 
 []($section.attrs("badges"))
 ## meow meow
