@@ -3,6 +3,12 @@
   --color-text: #e0e0e0;
   --color-link: #9f7aea;
   --color-border: #eecefe22;
+
+  --contrib-0: #1a1a1a;
+  --contrib-1: #3a2d52;
+  --contrib-2: #5b4382;
+  --contrib-3: #7d5cb3;
+  --contrib-4: #9f7aea;
 }
 
 @font-face {
@@ -103,13 +109,17 @@ a:hover:not(:has(img)) {
 blockquote {
   margin: 0;
   padding: 2px 0;
-  padding-left: 22px;
+  padding-left: 24px;
   border-left: 2px solid var(--color-link);
 }
 
 blockquote:hover {
-  padding-left: 20px;
+  padding-left: 18px;
   border-left-width: 4px;
+}
+
+blockquote p {
+  margin: 8px 4px;
 }
 
 li {
@@ -155,4 +165,30 @@ li::before {
   transform: translateY(-4px);
   transition: 0.075s linear;
   cursor: pointer;
+}
+
+#chart {
+  margin: 12px 0;
+
+  display: flex;
+  gap: 1px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+#chart > .week {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+#chart > .week > .day {
+  border: 1px solid var(--color-border);
+  width: 12px;
+  height: 12px;
+}
+
+#chart > .week > .day:hover {
+  transform: scale(1.2);
 }
