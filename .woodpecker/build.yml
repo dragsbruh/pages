@@ -20,7 +20,7 @@ steps:
       - git config --global user.email "ci@furina.is-a.dev"
       - git config --global user.name "Woodpecker CI"
 
-      - git clone --branch pages https://$${CODEBERG_TOKEN}@codeberg.org/$CI_REPO.git .publish
+      - git clone --branch pages --depth 1 https://$${CODEBERG_TOKEN}@codeberg.org/$CI_REPO.git .publish
       - cd .publish
 
       - git rm -r . || true
