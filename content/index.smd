@@ -1,7 +1,7 @@
 ---
 .title = "hi there hello",
 .description = "i code and stuff, sometimes, or maybe often",
-.date = @date("2026-04-16"),
+.date = @date("2026-05-31"),
 .author = "dragsbruh",
 .layout = "index.shtml",
 .draft = false,
