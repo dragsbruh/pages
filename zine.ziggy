@@ -5,6 +5,7 @@ Site {
     .layouts_dir_path = "layouts",
     .assets_dir_path = "assets",
     .static_assets = [
+        "oneko/classic.gif",
         "fonts/SerrifVF.woff2",
         ".well-known/discord",
         ".well-known/atproto-did",
