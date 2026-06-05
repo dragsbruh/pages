@@ -51,7 +51,7 @@ el.style.width = "32px";
 el.style.height = "32px";
 el.style.position = "fixed";
 el.style.pointerEvents = "none";
-el.style.backgroundImage = "url(/oneko.gif)";
+el.style.backgroundImage = "url(/oneko/classic.gif)";
 
 /**
 * @param {number} newX
