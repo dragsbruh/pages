@@ -44,10 +44,8 @@ and some miscellaneous generic stuff like:
 []($section)
 ## cool projects
 
-- [schism](https://codeberg.org/dragsbruh/schism): a cli minecraft launcher
-  written in zig. (WIP)
-- [pebl](https://codeberg.org/dragsbruh/pebl/): a tiny kernel in C for
-  [RISC-V architecture](https://riscv.org/) (WIP)
+- [lumine](https://codeberg.org/dragsbruh/lumine): an x86_64 UEFI linux kernel
+  bootloader
 - [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for
 (byte-level) [markov chains](https://en.wikipedia.org/wiki/Markov_chain)
 - [lexyc](https://codeberg.org/dragsbruh/lexyc/): x86(64) compiler for a
