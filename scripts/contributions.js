@@ -1,44 +1,108 @@
-const colors = [
-  "var(--contrib-0)",
-  "var(--contrib-1)",
-  "var(--contrib-2)",
-  "var(--contrib-3)",
-  "var(--contrib-4)",
-];
+function sundayOf(date) {
+  const sunday = new Date(date);
+  sunday.setUTCDate(sunday.getUTCDate() - sunday.getUTCDay());
+  sunday.setUTCHours(0, 0, 0, 0);
+  return sunday;
+}
 
-function getLevel(count) {
-  if (count === 0) return 0;
-  if (count < 3) return 1;
-  if (count < 6) return 2;
-  if (count < 10) return 3;
-  return 4;
+
+function colorOf(contributions) {
+  if (contributions === 0) return "var(--contrib-0)";
+  if (contributions < 3) return "var(--contrib-1)";
+  if (contributions < 6) return "var(--contrib-2)";
+  if (contributions < 10) return "var(--contrib-3)";
+  return "var(--contrib-4)";
+}
+
+function emptyWeekFrom(sunday) {
+  let dayCount = 7;
+
+  const thisSunday = sundayOf(new Date());
+  if (thisSunday.getTime() === sunday.getTime())
+    dayCount = new Date().getUTCDay() + 1;
+
+  const week = [];
+  for (let i = 0; i < dayCount; i++) {
+    const date = new Date(sunday);
+    date.setUTCDate(date.getUTCDate() + i);
+    week.push({
+      sources: {},
+      contributions: 0,
+      date: date.toISOString().slice(0, 10),
+    });
+  }
+
+  return week;
+}
+
+function buildHeatmapData(sources) {
+  // my ignorance led me to create this abomination
+  // i couldve used css grid and flattened, but i
+  // made this shit so im gonna use it
+
+  const weeks = new Map();
+
+  for (const sourceName of Object.keys(sources)) {
+    const source = sources[sourceName].sort((a, b) => a.timestamp - b.timestamp);
+
+    for (const day of source) {
+      const sunday = sundayOf(day.timestamp * 1000);
+      const key = Math.floor(sunday.getTime() / 1000);
+
+      if (!weeks.has(key)) {
+        weeks.set(key, emptyWeekFrom(sunday));
+      }
+
+      if (day.contributions > 0) {
+        const week = weeks.get(key);
+
+        const idx = new Date(day.timestamp * 1000).getUTCDay();
+        week[idx].contributions += day.contributions;
+
+        // so one of codeberg or github is producing non-UTC timestamps, until then this hack
+        // should work. it should be slightly placing contributions on the wrong day, but worst
+        // that could happen is like what 10 contributions get placed before or after that day.
+
+        if (!week[idx].sources[sourceName]) week[idx].sources[sourceName] = 0;
+        week[idx].sources[sourceName] += day.contributions;
+      }
+    }
+  }
+
+  return [...weeks.entries()].sort(([a], [b]) => a - b).map(([, week]) => week);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const parentDiv = document.querySelector("#contributions");
+  fetch("https://contrib.furina.is-a.dev/")
+    .then(res => res.json())
+    .then(data => {
+      const heatmap = buildHeatmapData(data);
 
-  // TODO: codeberg
+      const chart = document.createElement("div");
+      chart.id = "chart";
 
-  fetch("https://contrib.furina.is-a.dev/").then(res => res.json()).then(data => {
-    const chart = document.createElement("div");
-    parentDiv.appendChild(chart);
+      let total = 0;
 
-    chart.id = "chart";
+      for (const week of heatmap) {
+        for (const day of week) {
+          total += day.contributions;
 
-    data.weeks.forEach((week) => {
-      const row = document.createElement("div");
-      chart.appendChild(row);
+          const cell = document.createElement("div");
+          cell.className = "day";
 
-      row.className = "week";
+          cell.title = `${day.contributions} contributions on ${day.date} (${Object.entries(day.sources).map(([name, value]) => `${name}: ${value}`).join(", ")})`;
+          cell.style.backgroundColor = colorOf(day.contributions);
 
-      week.contributionDays.forEach((day) => {
-        const cell = document.createElement("div");
-        row.appendChild(cell);
+          chart.appendChild(cell);
+        }
+      }
 
-        cell.title = `${day.contributionCount} contributions on github on ${day.date}`
-        cell.className = "day";
-        cell.style.backgroundColor = colors[getLevel(day.contributionCount)];
-      })
-    })
-  })
-})
+      const msg = document.createElement("sub");
+      msg.className = "id";
+      msg.textContent = `${total} contributions since ${heatmap[0][0].date}`
+
+      const parent = document.querySelector("#contributions");
+      parent.appendChild(chart);
+      parent.appendChild(msg);
+    });
+});
