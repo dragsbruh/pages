@@ -41,6 +41,19 @@ and some miscellaneous generic stuff like:
 > note: these arent necessarily code contributions, however i do code a lot in my
   private time outside of codeberg/github.
 
+```=html
+<div id="contrib-chart">
+</div>
+
+<sub id="contrib-count">
+  loading contribution data...
+
+  <noscript>
+    you need to enable javascript to see contribution chart
+  </noscript>
+</sub>
+```
+
 []($section)
 ## cool projects
 
@@ -113,26 +126,26 @@ and [git](https://git.furina.is-a.dev/) for my other projects.
 []($section.attrs("badges"))
 ## meow meow
 
-![](/88x31/blink.gif)
-![](/88x31/bluepantsu.gif)
-![](/88x31/killmenow.gif)
-![](/88x31/meiling.gif)
-![](/88x31/estrogen.gif)
-![](/88x31/transnya.png)
-![](/88x31/nekoscape.gif)
-![](/88x31/girlsnow.png)
-![](/88x31/skirt.gif)
-![](/88x31/navi.gif)
-[![](/88x31/noweb32.gif)](https://yesterweb.org/no-to-web3/)
-![](/88x31/nft.gif)
-![](/88x31/capitalism.png)
-[![](/88x31/microslop.gif)](https://microslop.com/)
-![](/88x31/speech.gif)
-![](/88x31/linux.gif)
-[![](/88x31/codeberg.gif)](https://codeberg.org/)
-[![](/88x31/repair.jpg)](https://consumerrights.wiki/w/Main_Page)
-![](/88x31/thevoid.gif)
-[![](/88x31/meltice.gif)](https://www.youtube.com/watch?v=7AQbhes-Ntw)
-[![](/88x31/ukraine.gif)](https://u24.gov.ua/)
-[![](/88x31/palestine.gif)](https://www.map.org.uk/)
-[![](/88x31/antifa.gif)](https://archive.org/details/zines-anti-fascism)
+[](<$image.siteAsset('88x31/blink.gif').size(88, 31).alt('anime girl blinking')>)
+[](<$image.siteAsset('88x31/bluepantsu.gif').size(88, 31).alt('blue pantsu, dont ask me what that is')>)
+[](<$image.siteAsset('88x31/killmenow.gif').size(88, 31).alt('do it')>)
+[](<$image.siteAsset('88x31/meiling.gif').size(88, 31).alt('i have no idea who this person is lol')>)
+[](<$image.siteAsset('88x31/estrogen.gif').size(88, 31).alt('the thing that makes a person better')>)
+[](<$image.siteAsset('88x31/transnya.png').size(88, 31).alt('nya :3')>)
+[](<$image.siteAsset('88x31/nekoscape.gif').size(88, 31).alt('best viewed on nekoscape nyan')>)
+[](<$image.siteAsset('88x31/girlsnow.png').size(88, 31).alt('girls!!! now!!!')>)
+[](<$image.siteAsset('88x31/skirt.gif').size(88, 31).alt('and send me his number OwO')>)
+[](<$image.siteAsset('88x31/navi.gif').size(88, 31).alt('its pretty obvious isnt it')>)
+[](<$image.siteAsset('88x31/noweb32.gif').size(88, 31).alt('web3? more like no thanks')>)
+[](<$image.siteAsset('88x31/nft.gif').size(88, 31).alt('its dead now')>)
+[](<$image.siteAsset('88x31/capitalism.png').size(88, 31).alt('no thanks')>)
+[](<$image.siteAsset('88x31/microslop.gif').size(88, 31).alt('microsl*p')>)
+[](<$image.siteAsset('88x31/speech.gif').size(88, 31).alt('free speech hell yeah')>)
+[](<$image.siteAsset('88x31/linux.gif').size(88, 31).alt('the best operating system')>)
+[](<$image.siteAsset('88x31/codeberg.gif').size(88, 31).alt('codeberg, an awesome code forge, second only to my personal forgejo instance')>)
+[](<$image.siteAsset('88x31/repair.jpg').size(88, 31).alt('someone has a fulltime job managing a wiki that logs every shitty thing a company has done')>)
+[](<$image.siteAsset('88x31/thevoid.gif').size(88, 31).alt('in the void no one can hear you scream')>)
+[](<$image.siteAsset('88x31/meltice.gif').size(88, 31).alt('quite literally jealous of a lesbian relationship')>)
+[](<$image.siteAsset('88x31/ukraine.gif').size(88, 31).alt('why would they invade ukraine, dont they have enough land')>)
+[](<$image.siteAsset('88x31/palestine.gif').size(88, 31).alt('self explanatory')>)
+[](<$image.siteAsset('88x31/antifa.gif').size(88, 31).alt('also self explanatory')>)

@@ -94,6 +94,7 @@ footer {
 a:not(:has(img)) {
   color: var(--color-link);
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover:not(:has(img)) {
@@ -167,9 +168,10 @@ li::before {
   cursor: pointer;
 }
 
-#chart {
+#contrib-chart {
   width: 100%;
   margin: 12px 0;
+  aspect-ratio: 53 / 7;
 
   display: grid;
   grid-template-rows: repeat(7, 1fr);
@@ -177,12 +179,12 @@ li::before {
   gap: 1px;
 }
 
-#chart > .day {
+#contrib-chart > .day {
   aspect-ratio: 1;
   border: 1px solid var(--color-border);
 }
 
-#chart > .day:hover {
+#contrib-chart > .day:hover {
   transform: scale(1.2);
   cursor: pointer;
 }
