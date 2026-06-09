@@ -5,9 +5,12 @@ steps:
   build:
     image: alpine
     commands:
+      - wget -O minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.24.13/minify_linux_amd64.tar.gz
       - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.11.2/x86_64-linux-musl.tar.xz
-      - tar xJf zine.tar.xz
+      - tar xf zine.tar.xz
+      - tar xf minify.tar.gz minify
       - ./zine release -o .build/
+      - ./minify -ari .build/
     when:
       event: push
 
