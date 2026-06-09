@@ -5,7 +5,6 @@ function sundayOf(date) {
   return sunday;
 }
 
-
 function colorOf(contributions) {
   if (contributions === 0) return "var(--contrib-0)";
   if (contributions < 3) return "var(--contrib-1)";
@@ -78,14 +77,12 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(data => {
       const heatmap = buildHeatmapData(data);
 
-      const chart = document.createElement("div");
-      chart.id = "chart";
+      const chart = document.querySelector("#contrib-chart");
 
-      let total = 0;
-
+      let totalContributions = 0;
       for (const week of heatmap) {
         for (const day of week) {
-          total += day.contributions;
+          totalContributions += day.contributions;
 
           const cell = document.createElement("div");
           cell.className = "day";
@@ -97,12 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      const msg = document.createElement("sub");
-      msg.className = "id";
-      msg.textContent = `${total} contributions since ${heatmap[0][0].date}`
-
-      const parent = document.querySelector("#contributions");
-      parent.appendChild(chart);
-      parent.appendChild(msg);
+      const msg = document.querySelector("#contrib-count");
+      msg.textContent = `${totalContributions} contributions since ${heatmap[0][0].date}`
     });
 });
