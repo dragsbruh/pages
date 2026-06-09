@@ -72,6 +72,13 @@ main {
   padding: 0 24px;
 }
 
+footer {
+  padding: 0 24px;
+
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
 @media (min-width: 1024px) {
   main {
     width: 67%;
@@ -84,11 +91,6 @@ main {
     width: 50%;
     padding: 0;
   }
-}
-
-footer {
-  margin-top: 2rem;
-  margin-bottom: 4rem;
 }
 
 a:not(:has(img)) {
@@ -156,11 +158,10 @@ li::before {
   }
 }
 
-/* 
 .badges p {
   display: inline;
   margin-right: 0.5em;
-} */
+}
 
 .badges img:hover {
   transform: translateY(-4px);
