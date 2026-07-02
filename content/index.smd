@@ -38,9 +38,6 @@ and some miscellaneous generic stuff like:
 []($section.id("contributions"))
 ## contributions
 
-> note: these arent necessarily code contributions, however i do code a lot in my
-  private time outside of codeberg/github.
-
 ```=html
 <div id="contrib-chart">
 </div>
