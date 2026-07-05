@@ -125,14 +125,14 @@ blockquote p {
   margin: 8px 4px;
 }
 
-li {
+li:not(.webrings li) {
   position: relative;
 
   list-style: none;
   list-style-position: outside;
 }
 
-li::before {
+li:not(.webrings li)::before {
   content: " ";
 
   display: inline-block;
@@ -180,12 +180,21 @@ li::before {
   gap: 1px;
 }
 
-#contrib-chart > .day {
+#contrib-chart>.day {
   aspect-ratio: 1;
   border: 1px solid var(--color-border);
 }
 
-#contrib-chart > .day:hover {
+#contrib-chart>.day:hover {
   transform: scale(1.2);
   cursor: pointer;
+}
+
+.webrings ul {
+  padding: 0;
+}
+
+.webrings li {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,14 +1,22 @@
 ---
-.title = "hi there hello",
-.description = "i code and stuff, sometimes, or maybe often",
-.date = @date("2026-05-31"),
+.title = "hi im furina",
+.description = "i cant afford a carriage",
+.date = @date("2026-07-05"),
 .author = "dragsbruh",
 .layout = "index.shtml",
 .draft = false,
 --- 
 
-call me furina and im a student who likes to code and stuff,
+call me furina and im a student who likes to code and stuff
 
+[]($section.attrs("webrings"))
+## webrings
+
+- [<- prev](https://ring.stabbed.me/prev/from/furina.is-a.dev)
+  [stabring](https://ring.stabbed.me/)
+  [next ->](https://ring.stabbed.me/next/from/furina.is-a.dev)
+
+[]($section)
 ## languages
 
 recently ive taken a liking for C. either way, heres the languages that i like
@@ -57,12 +65,12 @@ and some miscellaneous generic stuff like:
 - [lumine](https://codeberg.org/dragsbruh/lumine): an x86_64 UEFI linux kernel
   bootloader
 - [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for
-(byte-level) [markov chains](https://en.wikipedia.org/wiki/Markov_chain)
+  (byte-level) [markov chains](https://en.wikipedia.org/wiki/Markov_chain)
 - [lexyc](https://codeberg.org/dragsbruh/lexyc/): x86(64) compiler for a
   turing-complete esoteric programming language in zig
   ([see original](https://git.gay/noraaoki/xy))
-- [brainfucc](https://codeberg.org/dragsbruh/brainfucc/): a brainfuck compiler
-in C targeting the greatest architecture: RISC-V
+- [brainfucc](https://codeberg.org/dragsbruh/brainfucc/): a optimizing brainfuck
+  compiler targeting targeting native assembly, on x86_64 and riscv64
 
 ### miscellaneous projects
 
@@ -82,23 +90,22 @@ in C targeting the greatest architecture: RISC-V
 eh its more like i randomly start doing stuff but generally most
 of my likings can be classified into:
 
-- networking: anything that involves two devices communicating
+- osdev: im starting to like doing stuff from scratch
 - graphics: started learning opengl and its awesome
-- osdev: recently dipped my pinky toe into this, and let me tell you, its
-  awesome. you should really try it out
-- open source: our* code you mean
-- creatures of steel
+- open source: cool shit, communism at its finest
+- networking: anything that involves two devices communicating
+- [creatures of steel](https://devilmayquake.com/)
 
 ### setup
 
 - operating system: [void linux](https://voidlinux.org/)
-- window manager: [sway](https://swaywm.org/).
+- window manager: [niri](https://niri-wm.github.io/) and [sway](https://swaywm.org/)
 - text editor/ide: [helix](https://helix-editor.com/)
 - ci/cid: [woodpecker ci](https://woodpecker-ci.org/)
 
 i had a homelab setup on an old laptop but rn its offline. it would otherwise
 be available with reasonable uptime on this domain, as well as on the alt url
-https://focalors.pp.ua
+<https://focalors.pp.ua>
 
 when its fully restored, there'd be [selfhosted ci](https://ci.furina.is-a.dev/)
 and [git](https://git.furina.is-a.dev/) for my other projects.
@@ -111,10 +118,10 @@ and [git](https://git.furina.is-a.dev/) for my other projects.
 [skyexplorewt](https://skyexplorewt.xyz/)
 [pbl](https://pbl.is-a.dev/)
 [nora](https://nora.stabbed.me/)
+[ari](https://a.stupid.cat/)
 [orangc](https://orangc.net/)
 [iostpa](https://iostpa.com/)
 [shiroi](https://shiroinekotfs.github.io/)
-[ari](https://a.stupid.cat/)
 [clove](https://c.stupid.cat/)
 [thusuzzee](https://z1.gg/)
 [plo](https://ploszukiwacz.is-a.dev/)
