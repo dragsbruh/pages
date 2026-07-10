@@ -1,9 +1,7 @@
 ---
 .title = "list of my socials",
-.date = @date("2026-04-16"),
-.author = "dragsbruh",
+.date = .date("2026-04-16"),
 .layout = "index.shtml",
-.draft = false,
 --- 
 
 pls dont stalk

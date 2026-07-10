@@ -4,18 +4,21 @@ when:
 steps:
   build:
     image: alpine
+    when:
+      event: push
     commands:
       - wget -O minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.24.13/minify_linux_amd64.tar.gz
-      - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.11.2/x86_64-linux-musl.tar.xz
+      - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.12.0/x86_64-linux-musl.tar.xz
       - tar xf zine.tar.xz
       - tar xf minify.tar.gz minify
       - ./zine release -o .build/
       - ./minify -ari .build/
-    when:
-      event: push
 
   publish:
     image: alpine/git
+    depends_on: build
+    when:
+      event: [push]
     environment:
       CODEBERG_TOKEN:
         from_secret: "codeberg_token"
@@ -32,6 +35,3 @@ steps:
       - git add --all
       - git commit -m "Woodpecker CI ${CI_COMMIT_SHA}" --allow-empty
       - git push
-    when:
-      event: [push]
-    depends_on: build

@@ -11,6 +11,8 @@
 
 <main id="main">
 	<h1 :text="$page.title"></h1>
+	<i :text="$page.description"></i>
+	<hr>
 
 	<div :if="$site.page('blog').isCurrent().not()">
 		<ctx :if="$page.nextPage?()">
@@ -35,7 +37,7 @@
 	<div :html="$page.content()"></div>
 
 	<ctx :if="$page.subpages().len.gt(0)">
-		<h3>subpages</h3>
+		<h3>pages in this section</h3>
 		<div :loop="$page.subpages()" class="column-list">
 			<a href="$loop.it.link()" title="$loop.it.description">
 				<ctx :text="$loop.it.date.format('2006-01-02')"></ctx>

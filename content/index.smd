@@ -1,10 +1,8 @@
 ---
 .title = "hi im furina",
 .description = "i cant afford a carriage",
-.date = @date("2026-07-05"),
-.author = "dragsbruh",
+.date = .date("2026-07-05"),
 .layout = "index.shtml",
-.draft = false,
 --- 
 
 call me furina and im a student who likes to code and stuff
