@@ -2,4 +2,4 @@
 
 live on <https://furina.is-a.dev/>
 
-**Zine SSG**: <https://zine-ssg.io/>
+**zine ssg**: <https://zine-ssg.io/>
