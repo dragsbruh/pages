@@ -11,8 +11,8 @@ steps:
       - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.12.0/x86_64-linux-musl.tar.xz
       - tar xf zine.tar.xz
       - tar xf minify.tar.gz minify
-      - ./zine release -o .build/
-      - ./minify -ari .build/
+      - ./zine release -o .ci/build
+      - ./minify -ari .ci/build
 
   publish:
     image: alpine/git
@@ -26,11 +26,11 @@ steps:
       - git config --global user.email "ci@furina.is-a.dev"
       - git config --global user.name "Woodpecker CI"
 
-      - git clone --branch pages --depth 1 https://$${CODEBERG_TOKEN}@codeberg.org/$CI_REPO.git .publish
-      - cd .publish
+      - git clone --branch pages --depth 1 https://$${CODEBERG_TOKEN}@codeberg.org/$CI_REPO.git .ci/publish
+      - cd .ci/publish
 
       - git rm -r . || true
-      - cp -a ../.build/. .
+      - cp -a ../build/. .
 
       - git add --all
       - git commit -m "Woodpecker CI ${CI_COMMIT_SHA}" --allow-empty

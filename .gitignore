@@ -1,5 +1,3 @@
-.ignore
 *.ziggy-schema
-
-public/
-pages/
+.ignore
+.ci
