@@ -7,6 +7,9 @@
 
 call me furina and im a student who likes to code and stuff
 
+> PUBLIC SERVIS ANNOUNCEMTN:
+> are you PBL? please [contact me]($link.page('socials'))
+
 []($section.attrs("webrings"))
 ## webrings
 
@@ -108,17 +111,7 @@ of my likings can be classified into:
 - text editor/ide: [helix](https://helix-editor.com/)
 - ci/cid: [woodpecker ci](https://woodpecker-ci.org/)
 
-i had a homelab setup on an old laptop but rn its offline. it would otherwise
-be available with reasonable uptime on this domain, as well as on the alt url
-<https://focalors.pp.ua>
-
-when its fully restored, there'd be [selfhosted ci](https://ci.furina.is-a.dev/)
-and [git](https://git.furina.is-a.dev/) for my other projects.
-
 ## cool people
-
-> PUBLIC SERVIS ANNOUNCEMTN:
-> are you PBL? please [contact me]($link.page('socials'))
 
 [skyexplorewt](https://skyexplorewt.xyz/)
 [pbl](https://pbl.is-a.dev/)
