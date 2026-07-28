@@ -11,5 +11,6 @@
         ".well-known/discord",
         ".well-known/atproto-did",
         ".domains",
+        "pgp.asc",
     ],
 }),
