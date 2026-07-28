@@ -125,29 +125,6 @@ blockquote p {
   margin: 8px 4px;
 }
 
-li:not(.webrings li) {
-  position: relative;
-
-  list-style: none;
-  list-style-position: outside;
-}
-
-li:not(.webrings li)::before {
-  content: " ";
-
-  display: inline-block;
-  width: 0.5rem;
-  height: 0.5rem;
-
-  position: absolute;
-  left: -1rem;
-  top: 0.5rem;
-
-  background-color: var(--color-link);
-
-  animation: rotate 10s linear infinite;
-}
-
 pre:has(> code) {
   overflow-x: scroll;
   width: 100%;
@@ -215,13 +192,4 @@ pre code .number {
 #contrib-chart>.day:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
-
-.webrings ul {
-  padding: 0;
-}
-
-.webrings li {
-  display: flex;
-  justify-content: space-between;
 }
