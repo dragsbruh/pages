@@ -1,7 +1,7 @@
 ---
 .title = "branches",
 .description = "have i always been this wrong",
-.date = .date("2026-07-29"),
+.date = .date("2026-07-30"),
 .layout = "blog.shtml",
 ---
 
