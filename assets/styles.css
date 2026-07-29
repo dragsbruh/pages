@@ -93,6 +93,10 @@ footer {
   }
 }
 
+p {
+  line-height: 1.6rem;
+}
+
 a:not(:has(img)) {
   color: var(--color-link);
   text-decoration: none;
