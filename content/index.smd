@@ -63,6 +63,8 @@ _tldr;_ im unemployed.
 []($section)
 ## cool projects
 
+- [wiretooth](https://codeberg.org/dragsbruh/wiretooth): a bluetooth transport proxy
+  for wireguard.
 - [lumine](https://codeberg.org/dragsbruh/lumine): an x86_64/aarch64 UEFI bootloader
   that works, written in zig
 - [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for
