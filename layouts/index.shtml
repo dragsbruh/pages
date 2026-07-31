@@ -7,9 +7,6 @@
 	<meta name="twitter:card" content="summary">
 	<meta name="twitter:image" content="$site.asset('avatar.jpg').link()">
 	<meta name="twitter:image:alt" content="thats furina">
-
-	<link rel="preconnect" href="https://contrib.furina.is-a.dev" crossorigin>
-	<script defer src="$site.asset('scripts/contributions.js').link()"></script>
 </head>
 
 <main id="main">

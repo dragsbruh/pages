@@ -44,22 +44,6 @@ where i just do that, i guess.
 
 _tldr;_ im unemployed.
 
-[]($section.id("contributions"))
-## contributions
-
-```=html
-<div id="contrib-chart">
-</div>
-
-<sub id="contrib-count">
-  loading contribution data...
-
-  <noscript>
-    you need to enable javascript to see contribution chart
-  </noscript>
-</sub>
-```
-
 []($section)
 ## cool projects
 
