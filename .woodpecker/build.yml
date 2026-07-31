@@ -7,8 +7,8 @@ steps:
     when:
       event: push
     commands:
-      - wget -O minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.24.13/minify_linux_amd64.tar.gz
-      - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.12.0/x86_64-linux-musl.tar.xz
+      - wget -O minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.24.14/minify_linux_amd64.tar.gz
+      - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.13.0/x86_64-linux-musl.tar.xz
       - tar xf zine.tar.xz
       - tar xf minify.tar.gz minify
       - ./zine release -o .ci/build
@@ -20,18 +20,18 @@ steps:
     when:
       event: [push]
     environment:
-      CODEBERG_TOKEN:
-        from_secret: "codeberg_token"
+      FORGEJO_TOKEN:
+        from_secret: "forgejo_token"
     commands:
-      - git config --global user.email "ci@furina.is-a.dev"
-      - git config --global user.name "Woodpecker CI"
+      - git config --global user.email "noreply+woodpecker@ririna.net"
+      - git config --global user.name "john woodpecker"
 
-      - git clone --branch pages --depth 1 https://$${CODEBERG_TOKEN}@codeberg.org/$CI_REPO.git .ci/publish
+      - git clone --branch pages --depth 1 "https://$${FORGEJO_TOKEN}@repo.ririna.net/dragsbruh/pages.git" .ci/publish
       - cd .ci/publish
 
       - git rm -r . || true
       - cp -a ../build/. .
 
       - git add --all
-      - git commit -m "Woodpecker CI ${CI_COMMIT_SHA}" --allow-empty
+      - git commit -m "ci (trigger by ${CI_COMMIT_SHA})" --allow-empty
       - git push

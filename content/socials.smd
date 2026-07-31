@@ -2,18 +2,14 @@
 .title = "list of my socials",
 .date = .date("2026-04-16"),
 .layout = "index.shtml",
---- 
-
-> im migrating from codeberg to my own hosted git soon
+---
 
 - [email](mailto:dragsbruh@protonmail.com)
 - [email (alt)](mailto:furina@ririna.net)
-- [codeberg](https://codeberg.org/dragsbruh)
-- [reddit](https://reddit.com/u/LegenDrags)
+- [reddit](https://reddit.com/user/LegenDrags)
 - [bluesky](https://bsky.app/furina.is-a.dev)
 - [discord (server)](https://discord.gg/2DDTk9UQMz)
 - [discord (user)](https://discord.com/users/781445370177126401)
-- [github (moved to codeberg)](https://github.com/dragsbruh)
 - [matrix.org](https://matrix.to/#/@dragsbruh:matrix.org)
 - [steam](https://steamcommunity.com/id/dragsbruh/)
 - [itch.io](https://dragsbruh.itch.io)
@@ -21,27 +17,43 @@
 - [last.fm](https://last.fm/user/dragsbruh)
 - [listenbrainz](https://beta.listenbrainz.org/user/dragsbruh/)
 - [instagram](https://instagram.com/dragsbruh)
-- [git.orangc.net](https://git.orangc.net/dragsbruh)
 
 > _PS_: you can also [google my username](https://google.com/search?q=%22dragsbruh%22) to find secret accounts!
+
+[]($section)
+## source repositories
+
+in an ideal scenario i would love to selfhost my own stuff but lets see
+how this plays out. i will not migrate all my repositories to my forgejo
+instance yet, but i have mirrors sitting somewhere in the backups.
+
+- [forgejo (primary)](https://repo.ririna.net/dragsbruh)
+- [codeberg (moved to forgejo)](https://codeberg.org/dragsbruh)
+- [github (moved to forgejo)](https://github.com/dragsbruh)
+- [git.orangc.net (extra)](https://git.orangc.net/dragsbruh)
 
 ## domains
 
 ### main site
 
 - <https://ririna.net>
-- <https://www.ririna.net>
-- <https://furina.is-a.dev>
-- <https://www.furina.is-a.dev>
 
 ### alt urls
 
 - <https://3.is-a.dev>
 - <https://ufu.is-a.dev>
+- <https://furina.is-a.dev>
 - <https://ririna.is-a.dev>
-- <https://www.ririna.is-a.dev>
+- <https://furina.is-a.stupid.cat>
 - <https://furina.imlesbian.fyi>
+
+### hosted
+
+- <https://ci.ririna.net> - woodpecker ci
+- <https://repo.ririna.net> - forgejo
+- <https://copy.ririna.net> - copyparty
 
 ### extras
 
+- <https://furina.4k.pics>
 - <https://focalors.pp.ua>

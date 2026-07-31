@@ -5,37 +5,29 @@
 .layout = "index.shtml",
 --- 
 
-call me furina and im a student who likes to code and stuff
-
-> PUBLIC SERVIS ANNOUNCEMTN:
-> are you PBL? please [contact me]($link.page('socials'))
+_systems programmer_
 
 []($section)
 ## languages
 
-recently ive taken a liking for C. either way, heres the languages that i like
-and use constantly:
+heres the languages that i like and use constantly:
 
-- [zig](https://ziglang.org/): second bestest language ever, 1.0 tomorrow
-- [c99](https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf): the bestest language ever
-- [posix shell](https://pubs.opengroup.org/onlinepubs/9699919799/utilities/V3_chap02.html)
+- [zig](https://ziglang.org/)
+- [c99](https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf)
 
 and heres some more that i have adequate experience with:
 
-- [golang](https://go.dev/): mostly for web projects because it has an awesome
-  concurrency model and all that.
-- [rust](https://rust-lang.org/): its fast, and if you like pain its also safe
-- [python3](https://python.org/): i just used it for 3 whole years straight im
-  good at it i think
+- [golang](https://go.dev/)
+- [rust](https://rust-lang.org/)
+- [python3](https://python.org/)
 
 and some miscellaneous generic stuff like:
 
-- generic webdev stuff like html/css/js
-- better webdev stuff like [typescript](https://www.typescriptlang.org/),
-  [scss](https://sass-lang.com/) and [tailwind](https://tailwindcss.com/)
-- frameworks like [svelte](https://svelte.dev/)
-  (+[sveltekit](https://svelte.dev/docs/kit/introduction)),
-  [solidjs](https://solidjs.org/), and [astro](https://astro.build/)
+- [typescript](https://www.typescriptlang.org/),
+- [scss](https://sass-lang.com/)
+- [tailwind](https://tailwindcss.com/)
+- [svelte](https://svelte.dev/) + [sveltekit](https://svelte.dev/docs/kit/introduction)
+- [solidjs](https://solidjs.org/)
 
 ## work
 
@@ -68,24 +60,18 @@ _tldr;_ im unemployed.
 - [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror/): a
   [community mirror](https://ziglang.org/news/announcing-community-mirrors/)
   for downloading zig written in posix shell
-- [judgementdaysimulator](https://codeberg.org/dragsbruh/judgementdaysimulator):
-  JUDGEMENT! CRUSH! (random stuff in c/opengl)
-- [yurisync](https://codeberg.org/dragsbruh/yurisync/): a generic bluesky media
-  sync tool that i branded with yuri because yuri is very important
 - [gopresence](https://codeberg.org/dragsbruh/gopresence/): discord presence
   library for golang programs (cross platform, and doesnt suck)
 - [clispy](https://codeberg.org/dragsbruh/clispy/): a tiny lisp-like language.
 
 ### projects i contributed to
 
-open source bezt.
-
 - [is-a.dev](https://github.com/is-a-dev/register/)
 
 ## interests
 
-eh its more like i randomly start doing stuff but generally most
-of my likings can be classified into:
+eh its more like i randomly start doing stuff but generally most of my likings
+can be classified into:
 
 - osdev: im starting to like doing stuff from scratch
 - graphics: started learning opengl and its awesome
@@ -102,14 +88,13 @@ of my likings can be classified into:
 ### home server
 
 i have a server that i run, not the most reliable but works fantastic and i love it.
-
-- [woodpecker](https://ci.furina.is-a.dev): personal ci/cd i use for this site as well as other projects.
-- [git mirror](https://mirror.ririna.net): primarily for projects i like and might be interested in. i plan
-  to bring back ziggymirror as well as a lazy xbps mirror but yeah.
-- [copyparty](https://share.ririna.net): mostly for public shares or personal backups
-- [jellyfin](https://watch.ririna.net): for friends and mostly myself
+the site you see right now, as well as my primary git forge are hosted on it. see
+hosted section on [socials](./socials) for a list of all hosted stuff on my server.
 
 ## cool people
+
+> PUBLIC SERVIS ANNOUNCEMTN:
+> are you PBL? please [contact me]($link.page('socials'))
 
 [skyexplorewt](https://skyexplorewt.xyz/)
 [pbl](https://pbl.is-a.dev/)
