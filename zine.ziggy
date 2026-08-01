@@ -14,3 +14,6 @@
         "pgp.asc",
     ],
 }),
+.supermd = .{
+    .auto_target_blank = true,
+},

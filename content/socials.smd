@@ -1,8 +1,10 @@
 ---
 .title = "list of my socials",
-.date = .date("2026-04-16"),
+.date = .date("2026-08-01"),
 .layout = "index.shtml",
 ---
+
+[]($section)
 
 - [email](mailto:dragsbruh@protonmail.com)
 - [email (alt)](mailto:furina@ririna.net)
@@ -20,7 +22,6 @@
 
 > _PS_: you can also [google my username](https://google.com/search?q=%22dragsbruh%22) to find secret accounts!
 
-[]($section)
 ## source repositories
 
 in an ideal scenario i would love to selfhost my own stuff but lets see
@@ -34,6 +35,11 @@ instance yet, but i have mirrors sitting somewhere in the backups.
 
 ## domains
 
+after my frustation with various git hosting providers i decided to selfhost
+most of my stuff from this very site to forgejo.
+
+this might change soon but i dont want it to.
+
 ### main site
 
 - <https://ririna.net>
@@ -46,12 +52,6 @@ instance yet, but i have mirrors sitting somewhere in the backups.
 - <https://ririna.is-a.dev>
 - <https://furina.is-a.stupid.cat>
 - <https://furina.imlesbian.fyi>
-
-### hosted
-
-- <https://ci.ririna.net> - woodpecker ci
-- <https://repo.ririna.net> - forgejo
-- <https://copy.ririna.net> - copyparty
 
 ### extras
 

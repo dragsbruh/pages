@@ -1,77 +1,58 @@
 ---
 .title = "hi im furina",
 .description = "our new home",
-.date = .date("2026-07-05"),
+.date = .date("2026-08-01"),
 .layout = "index.shtml",
 --- 
 
-_systems programmer_
+_a systems programmer_
 
 []($section)
 ## languages
 
-heres the languages that i like and use constantly:
+i love and constantly use [zig](https://ziglang.org/), and recently i have also been using
+[c99](https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf) a lot, but i also have
+adequate experience with and occasionally use [golang](https://go.dev/) and very occasionally
+[rust](https://rust-lang.org/).
 
-- [zig](https://ziglang.org/)
-- [c99](https://www.open-std.org/jtc1/sc22/WG14/www/docs/n1256.pdf)
-
-and heres some more that i have adequate experience with:
-
-- [golang](https://go.dev/)
-- [rust](https://rust-lang.org/)
-- [python3](https://python.org/)
-
-and some miscellaneous generic stuff like:
-
-- [typescript](https://www.typescriptlang.org/),
-- [scss](https://sass-lang.com/)
-- [tailwind](https://tailwindcss.com/)
-- [svelte](https://svelte.dev/) + [sveltekit](https://svelte.dev/docs/kit/introduction)
-- [solidjs](https://solidjs.org/)
+i also have experience with other miscellaneous languages such as [python3](https://python.org/),
+[typescript](https://www.typescriptlang.org/), [scss](https://sass-lang.com/) and frameworks
+and libraries such as [tailwind](https://tailwindcss.com/), [svelte](https://svelte.dev/),
+[sveltekit](https://svelte.dev/docs/kit/introduction) and [solidjs](https://solidjs.org/).
 
 ## work
 
-im currently a volunteer pr reviewer at the <https://is-a.dev/> subdomain service,
-where i just do that, i guess.
-
-_tldr;_ im unemployed.
+im currently a volunteer pr reviewer at the [is-a.dev](https://is-a.dev) subdomain service.
+do you intend on hiring me? [see this](./hire)
 
 []($section)
 ## cool projects
 
-- [wiretooth](https://codeberg.org/dragsbruh/wiretooth): a bluetooth transport proxy
-  for wireguard.
-- [lumine](https://codeberg.org/dragsbruh/lumine): an x86_64/aarch64 UEFI bootloader
-  that works, written in zig
-- [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for
-  (byte-level) [markov chains](https://en.wikipedia.org/wiki/Markov_chain)
-- [lexyc](https://codeberg.org/dragsbruh/lexyc/): x86(64) compiler for a
-  turing-complete esoteric programming language in zig
-  ([see original](https://git.gay/noraaoki/xy))
-- [brainfucc](https://codeberg.org/dragsbruh/brainfucc/): a optimizing brainfuck
-  compiler targeting targeting native assembly, on x86_64 and riscv64
+- [wiretooth](https://codeberg.org/dragsbruh/wiretooth): a bluetooth transport proxy for wireguard
+- [lumine](https://codeberg.org/dragsbruh/lumine): an x86_64/aarch64 UEFI bootloader written in zig
+- [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for markov chains in c
+  (see [wikipedia.org/Markov_chain](https://en.wikipedia.org/wiki/Markov_chain))
+- [brainfucc](https://codeberg.org/dragsbruh/brainfucc): optimizing brainfuck compiler targeting
+  native x86_64/riscv64 gnu assembly
+- [lexyc](https://codeberg.org/dragsbruh/lexyc): compilers for the turing-complete "xy" esoteric
+  programming language.
 
 ### miscellaneous projects
 
-- [lain](https://codeberg.org/dragsbruh/lain): a tiny and fast http/1.1 server library
-  written in zig.
-- [minimux](https://codeberg.org/dragsbruh/minimux): a tiny linux kernel + userspace
-  experiment, primarily made to test lumine.
-- [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror/): a
-  [community mirror](https://ziglang.org/news/announcing-community-mirrors/)
-  for downloading zig written in posix shell
-- [gopresence](https://codeberg.org/dragsbruh/gopresence/): discord presence
-  library for golang programs (cross platform, and doesnt suck)
-- [clispy](https://codeberg.org/dragsbruh/clispy/): a tiny lisp-like language.
+- [lain](https://codeberg.org/dragsbruh/lain): a tiny and fast http/1.1 server library written in zig.
+- [minimux](https://codeberg.org/dragsbruh/minimux): a tiny linux kernel + userspace experiment,
+  primarily made to test lumine.
+- [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror): a community mirror server for the zig
+  programming language.
 
-### projects i contributed to
+### open source contributions
 
-- [is-a.dev](https://github.com/is-a-dev/register/)
+- [takina](https://git.orang.ci/c/takina) - a discord bot
+- [is-a.dev](https://github.com/is-a-dev/register/) - subdomain service
 
 ## interests
 
-eh its more like i randomly start doing stuff but generally most of my likings
-can be classified into:
+i really am into a lot of stuff, but generally most of my likings can be classified into:
 
 - osdev: im starting to like doing stuff from scratch
 - graphics: started learning opengl and its awesome
@@ -81,15 +62,20 @@ can be classified into:
 
 ### setup
 
-- operating system: [void linux](https://voidlinux.org/)
-- window manager: [niri](https://niri-wm.github.io/)
-- text editor/ide: [helix](https://helix-editor.com/)
+for my daily driver i use the [void linux](https://voidlinux.org/) distribution, which i love and thin kis the best,
+with the [niri](https://niri-wm.github.io/) window manager. i use the [helix](https://helix-editor.com/)
+ide for editing code or really anything.
 
 ### home server
 
-i have a server that i run, not the most reliable but works fantastic and i love it.
-the site you see right now, as well as my primary git forge are hosted on it. see
-hosted section on [socials](./socials) for a list of all hosted stuff on my server.
+i have a server that i run, not the most reliable but works fantastic and i love it. the server also uses
+void linux and manages selfhosted services via runit. this very site, as of writing this, is hosted on my
+home server, but i also selfhost these other services primarily for myself:
+
+- <https://ci.ririna.net> - woodpecker ci
+- <https://repo.ririna.net> - forgejo
+- <https://copy.ririna.net> - copyparty
+- <https://home.ririna.net> - glance
 
 ## cool people
 

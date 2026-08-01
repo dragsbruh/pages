@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1">
 
-		<title :text="$site.title"></title>
+		<title :text="$site.title.suffix(' - ', $page.title)"></title>
 		<meta name="description" content="$page.description">
 
 		<link rel="icon" type="image/jpeg" href="/avatar.jpg">
@@ -36,8 +36,8 @@
 		<nav id="navbar">
 			<a href="$site.page('').link()">furina</a>
 			<a href="$site.page('blog').link()">blog</a>
-			<a href="$site.page('socials').link()">socials</a>
-			<a href="https://codeberg.org/dragsbruh" target="_blank">codeberg</a>
+			<a href="$site.page('hire').link()">hire</a>
+			<a href="$site.page('socials').link()">contact</a>
 		</nav>
 
 		<main id="main">
