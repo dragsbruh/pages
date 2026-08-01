@@ -7,8 +7,8 @@ steps:
     when:
       event: push
     commands:
-      - wget -O minify.tar.gz https://github.com/tdewolff/minify/releases/download/v2.24.14/minify_linux_amd64.tar.gz
-      - wget -O zine.tar.xz https://github.com/kristoff-it/zine/releases/download/v0.13.0/x86_64-linux-musl.tar.xz
+      - wget -O minify.tar.gz http://copy.infra.ririna.net/infra/ci/minify_linux_amd64.tar.gz
+      - wget -O zine.tar.xz http://copy.infra.ririna.net/infra/ci/zine-x86_64-linux-musl.tar.xz
       - tar xf zine.tar.xz
       - tar xf minify.tar.gz minify
       - ./zine release -o .ci/build
