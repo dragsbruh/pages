@@ -36,7 +36,6 @@
 		<nav id="navbar">
 			<a href="$site.page('').link()">furina</a>
 			<a href="$site.page('blog').link()">blog</a>
-			<a href="$site.page('hire').link()">hire</a>
 			<a href="$site.page('socials').link()">contact</a>
 		</nav>
 
