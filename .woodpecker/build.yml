@@ -1,6 +1,12 @@
 when:
   branch: master
 
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+    settings:
+      remote: http://repo.infra.ririna.net/dragsbruh/pages.git
+
 steps:
   build:
     image: alpine
@@ -26,7 +32,7 @@ steps:
       - git config --global user.email "noreply+woodpecker@ririna.net"
       - git config --global user.name "john woodpecker"
 
-      - git clone --branch pages --depth 1 "https://$${FORGEJO_TOKEN}@repo.ririna.net/dragsbruh/pages.git" .ci/publish
+      - git clone --branch pages --depth 1 "http://$${FORGEJO_TOKEN}@repo.infra.ririna.net/dragsbruh/pages.git" .ci/publish
       - cd .ci/publish
 
       - git rm -r . || true
