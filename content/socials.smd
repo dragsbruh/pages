@@ -28,6 +28,9 @@ in an ideal scenario i would love to selfhost my own stuff but lets see
 how this plays out. i will not migrate all my repositories to my forgejo
 instance yet, but i have mirrors sitting somewhere in the backups.
 
+for open source contributions or whereever necessary, i use codeberg and github.
+otherwise i prefer using my own.
+
 - [forgejo (primary)](https://repo.ririna.net/dragsbruh)
 - [codeberg (moved to forgejo)](https://codeberg.org/dragsbruh)
 - [github (moved to forgejo)](https://github.com/dragsbruh)
@@ -47,9 +50,9 @@ this might change soon but i dont want it to.
 ### alt urls
 
 - <https://3.is-a.dev>
-- <https://ufu.is-a.dev>
-- <https://furina.is-a.dev>
+- <https://furi.is-a.dev>
 - <https://ririna.is-a.dev>
+- <https://furina.is-a.dev>
 - <https://furina.is-a.stupid.cat>
 - <https://furina.imlesbian.fyi>
 
