@@ -1,17 +1,46 @@
 :root {
-  --color-bg: #0f0f0f;
-  --color-text: #e0e0e0;
-  --color-link: #9f7aea;
+  --color-bg: #090909;
+  --color-pan: #202020;
+  --color-text: #f9f9f9;
+  --color-link: #9f7afe;
   --color-border: #eecefe22;
 }
 
 @font-face {
-  font-family: Serrif;
-  src:
-    url(/fonts/SerrifVF.woff2) format("woff2 supports variations"),
-    url(/fonts/SerrifVF.woff2) format("woff2-variations");
+  font-family: "Libertinus Serif";
+  src: url("/fonts/libertinus/LibertinusSerif-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-  font-weight: 100 900;
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("/fonts/libertinus/LibertinusSerif-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("/fonts/libertinus/LibertinusSerif-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("/fonts/libertinus/LibertinusSerif-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Commit Mono";
+  src: url("/fonts/commit-mono/CommitMono-400-Regular.woff2") format("woff2");
+  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -39,8 +68,8 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
 
-  font-size: 20px;
-  font-family: "Serrif", serif;
+  font-size: 22px;
+  font-family: "Libertinus Serif", serif;
   font-feature-settings:
     "calt" 1,
     "liga" 1;
@@ -59,6 +88,18 @@ nav#navbar {
   border-bottom: 1px solid var(--color-border);
 }
 
+.column-list {
+  display: flex;
+  flex-direction: column;
+}
+
+nav#navbar a:hover,
+.column-list:hover a {
+  text-decoration: none;
+  color: var(--color-bg);
+  background-color: var(--color-text);
+}
+
 main {
   flex-grow: 1;
 
@@ -75,14 +116,14 @@ footer {
 
 @media (min-width: 1024px) {
   main {
-    width: 67%;
+    width: 60%;
     padding: 0;
   }
 }
 
 @media (min-width: 1440px) {
   main {
-    width: 50%;
+    width: 47%;
     padding: 0;
   }
 }
@@ -94,17 +135,10 @@ p {
 a:not(:has(img)) {
   color: var(--color-link);
   text-decoration: none;
-  font-weight: 600;
 }
 
 a:hover:not(:has(img)) {
-  color: var(--color-bg);
-  background-color: var(--color-text);
-}
-
-.column-list {
-  display: flex;
-  flex-direction: column;
+  text-decoration: underline;
 }
 
 blockquote {
@@ -123,10 +157,31 @@ blockquote p {
   margin: 8px 4px;
 }
 
+code {
+  font-family: "Commit Mono";
+  font-size: 18px;
+}
+
+code:not(pre > code) {
+  background-color: var(--color-pan);
+  border: 1px solid var(--color-pan);
+  padding: 0 4px;
+}
+
+code:not(pre > code):hover {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+}
+
+pre>code {
+  font-size: 16px;
+}
+
 pre:has(> code) {
   overflow-x: scroll;
   width: 100%;
-  padding: 16px 0;
+  padding: 8px 16px;
+  border: 1px solid var(--color-border);
 }
 
 pre code .keyword {

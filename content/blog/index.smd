@@ -2,5 +2,9 @@
 .title = "blog",
 .description = "might write something sometimes maybe",
 .date = .date("2026-04-17"),
-.layout = "blog.shtml",
+.layout = "page.shtml",
 --- 
+
+# blog
+
+_crickets chirp_

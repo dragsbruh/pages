@@ -1,0 +1,24 @@
+<extend template="base.shtml">
+
+<head id="head">
+	<meta property="og:image" content="$site.asset('avatar.jpg').link()">
+	<meta property="og:image:alt" content="its furina!">
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:image" content="$site.asset('avatar.jpg').link()">
+	<meta name="twitter:image:alt" content="its furina!">
+</head>
+
+<main id="main">
+	<div :html="$page.content()"></div>
+
+	<ctx :if="$page.subpages().len.gt(0).and($site.index().isCurrent().not())">
+		<h3>pages in this section</h3>
+		<div :loop="$page.subpages()" class="column-list">
+			<a href="$loop.it.link()" title="$loop.it.description">
+				<ctx :text="$loop.it.date.format('2006-01-02')"></ctx>
+				<ctx :text="$loop.it.title"></ctx>
+			</a>
+		</div>
+	</ctx>
+</main>

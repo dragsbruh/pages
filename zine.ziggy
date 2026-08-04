@@ -6,14 +6,14 @@
     .layouts_dir_path = "layouts",
     .assets_dir_path = "assets",
     .static_assets = [
-        "oneko/classic.gif",
-        "fonts/SerrifVF.woff2",
-        ".well-known/discord",
-        ".well-known/atproto-did",
+        ".well-known",
         ".domains",
         "pgp.asc",
+        "oneko",
+        "fonts",
     ],
 }),
 .supermd = .{
+    .headings_h2 = true,
     .auto_target_blank = true,
 },

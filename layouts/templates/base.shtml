@@ -36,7 +36,7 @@
 		<nav id="navbar">
 			<a href="$site.page('').link()">furina</a>
 			<a href="$site.page('blog').link()">blog</a>
-			<a href="$site.page('socials').link()">contact</a>
+			<a href="$site.page('contact').link()">contact</a>
 		</nav>
 
 		<main id="main">
@@ -46,9 +46,7 @@
 		<footer id="footer">
 			<sub>
 				&#169; 2026 dragsbruh. content licensed under
-				<a href="https://opensource.org/license/bsd-2-clause" target="_blank">
-					BSD-2-Clause
-				</a>
+				<a href="https://opensource.org/license/bsd-2-clause" target="_blank">BSD-2-Clause</a>
 				unless mentioned otherwise.
 			</sub>
 		</footer>
