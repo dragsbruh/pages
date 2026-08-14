@@ -1,4 +1,3 @@
-.zine_version = "0.13.0",
 .site = .simple(.{
     .title = "furina's stuff",
     .host_url = "https://ririna.net",
@@ -7,8 +6,6 @@
     .assets_dir_path = "assets",
     .static_assets = [
         ".well-known",
-        ".domains",
-        "pgp.asc",
         "oneko",
         "fonts",
     ],
@@ -17,3 +14,4 @@
     .headings_h2 = true,
     .auto_target_blank = true,
 },
+.zine_version = "0.13.0",

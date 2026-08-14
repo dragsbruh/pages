@@ -4,25 +4,25 @@
 .date = .date("2026-08-01"),
 ---
 
-# contact information
+# contact information/socials
 
-- [dragsbruh@protonmail.com](mailto:dragsbruh@protonmail.com)
-- [furina@ririna.net](mailto:furina@ririna.net)
-- [reddit/LegenDrags](https://reddit.com/user/LegenDrags)
-- [bsky.app/ririna.net](https://bsky.app/profile/ririna.net)
-- [discord/dragsbruh](https://discord.com/users/781445370177126401)
-- [discord.gg/2DDTk9UQMz](https://discord.gg/2DDTk9UQMz)
-- [@dragsbruh:matrix.org](https://matrix.to/#/@dragsbruh:matrix.org)
-- [steam/dragsbruh](https://steamcommunity.com/id/dragsbruh/)
-- [dragsbruh.itch.io](https://dragsbruh.itch.io)
-- [youtube/@dragsbruh](https://youtube.com/@dragsbruh)
-- [last.fm/dragsbruh](https://last.fm/user/dragsbruh)
-- [listenbrainz/dragsbruh](https://beta.listenbrainz.org/user/dragsbruh/)
+- [primary email](mailto:dragsbruh@protonmail.com)
+- [secondary email](mailto:furina@ririna.net)
+- [reddit / LegenDrags](https://reddit.com/user/LegenDrags)
+- [bsky.app / ririna.net](https://bsky.app/profile/ririna.net)
+- [discord / dragsbruh](https://discord.com/users/781445370177126401)
+- [discord.gg / Palais Mermonia](https://discord.gg/2DDTk9UQMz)
+- [matrix.org / dragsbruh](https://matrix.to/#/@dragsbruh:matrix.org)
+- [steam / dragsbruh](https://steamcommunity.com/id/dragsbruh/)
+- [itch.io / dragsbruh](https://dragsbruh.itch.io)
+- [youtube / dragsbruh](https://youtube.com/@dragsbruh)
+
+pgp public key: [`38A8BA5021C7E9182C78DEE00A3D36D19A98D8FD`]($link.siteAsset('pgp.asc'))
 
 ## source repositories
 
-for open source contributions or wherever necessary, i use codeberg or github.
-otherwise i prefer using my own self-hosted forgejo instance.
+for open source contributions or wherever necessary, i use codeberg or github. otherwise i prefer using my
+own self-hosted forgejo instance. i still need to decide if i want to mirror back to codeberg.
 
 - [repo.ririna.net/dragsbruh](https://repo.ririna.net/dragsbruh)
 - [codeberg.org/dragsbruh (old)](https://codeberg.org/dragsbruh)

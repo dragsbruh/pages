@@ -25,50 +25,63 @@ and libraries such as [tailwind](https://tailwindcss.com/), [svelte](https://sve
 
 im currently a volunteer pr reviewer at the [is-a.dev](https://is-a.dev) subdomain service.
 
-[]($section)
-## cool projects
+### wip projects
 
-- [wiretooth](https://codeberg.org/dragsbruh/wiretooth): a bluetooth transport proxy for wireguard
-- [lumine](https://codeberg.org/dragsbruh/lumine): an x86_64/aarch64 UEFI bootloader written in zig
-- [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh): a fast runtime for markov chains in c
-- [brainfucc](https://codeberg.org/dragsbruh/brainfucc): optimizing brainfuck compiler for assembly
-- [lexyc](https://codeberg.org/dragsbruh/lexyc): compilers for the turing-complete "xy" esoteric
-  programming language.
+- [affine](https://repo.ririna.net/dragsbruh/affine):
+  a 2d motion graphics library/framework in zig, inspired by after effects
+- [ztime](https://repo.ririna.net/dragsbruh/ztime):
+  an efficient uptime tracker designed specifically for selfhosted stuff
+
+### cool projects
+
+- [wiretooth](https://codeberg.org/dragsbruh/wiretooth):
+  a bluetooth transport proxy for wireguard
+- [lumine](https://codeberg.org/dragsbruh/lumine):
+  an x86_64/aarch64 UEFI bootloader written in zig
+- [envidiyuh](https://codeberg.org/dragsbruh/envidiyuh):
+  a fast runtime for markov chains in c
+- [brainfucc](https://codeberg.org/dragsbruh/brainfucc):
+  optimizing brainfuck compiler for assembly
+- [lexyc](https://codeberg.org/dragsbruh/lexyc):
+  compilers for the "xy" esoteric programming language
 
 ### miscellaneous projects
 
-- [lain](https://codeberg.org/dragsbruh/lain): a tiny and fast http/1.1 server library written in zig.
-- [minimux](https://codeberg.org/dragsbruh/minimux): a tiny linux kernel + userspace experiment,
-  primarily made to test lumine.
-- [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror): a community mirror server for the zig
-  programming language.
+- [lain](https://codeberg.org/dragsbruh/lain):
+  a tiny and fast http/1.1 server library written in zig
+- [minimux](https://codeberg.org/dragsbruh/minimux):
+  a tiny linux kernel + userspace experiment, primarily made to test lumine
+- [ziggymirror](https://codeberg.org/dragsbruh/ziggymirror):
+  a community mirror server for the zig programming language
 
 ### open source contributions
 
-- [git.orangc.net/c/takina](https://git.orang.ci/c/takina) - a discord bot
-- [github.com/is-a-dev](https://github.com/is-a-dev/register/) - subdomain service
+- [git.orangc.net/c/takina](https://git.orang.ci/c/takina):
+  a discord bot written in python
+- [github.com/is-a-dev](https://github.com/is-a-dev/register/):
+  a subdomain service for developers
 
 ## interests
 
-i really am into a lot of stuff, but generally most of my likings can be classified into:
+i really like a lot of stuff, but generally most of my likings can be classified into:
 
-- osdev: im starting to like doing stuff from scratch
-- graphics: started learning opengl and its awesome
+- os-dev: im like doing stuff from scratch, like _scratch_
+- graphics: did a few stuff here and there with opengl
 - open source: cool shit, communism at its finest
 - networking: anything that involves two devices communicating
 - [creatures of steel](https://devilmayquake.com/)
 
 ### setup
 
-for my daily driver i use the [void linux](https://voidlinux.org/) distribution, which i love and thin kis the best,
-with the [niri](https://niri-wm.github.io/) window manager. i use the [helix](https://helix-editor.com/)
-ide for editing code or really anything.
+for my daily driver i love and use the [void linux](https://voidlinux.org/) distribution, along with
+with the [niri](https://niri-wm.github.io/) window manager. i use [helix](https://helix-editor.com/)
+to write code.
 
 ### home server
 
-i have a server that i run, not the most reliable but works fantastic and i love it. the server also uses
-void linux and manages selfhosted services via runit. this very site, as of writing this, is hosted on my
-home server, but i also selfhost these other services primarily for myself:
+i have a server that i run. its not the most reliable but works fantastic and i love it. the server
+also uses void linux and manages selfhosted services via runit. this very site, as of writing this,
+is hosted on my home server, but i also selfhost these other services primarily for myself.
 
 - <https://ci.ririna.net> - woodpecker ci
 - <https://repo.ririna.net> - forgejo
@@ -78,7 +91,6 @@ home server, but i also selfhost these other services primarily for myself:
 
 ## cool people
 
-> PUBLIC SERVIS ANNOUNCEMTN:
 > are you PBL? please [contact me](/contact)
 
 [skyexplorewt](https://skyexplorewt.xyz/)
