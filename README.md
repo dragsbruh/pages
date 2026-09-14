@@ -1,5 +1,5 @@
 # hi there hello
 
-live on <https://ririna.net>
+<https://ririna.net> or <https://furina.is-a.dev>
 
 **zine ssg**: <https://zine-ssg.io/>
